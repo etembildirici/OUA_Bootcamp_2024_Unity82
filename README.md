@@ -13,12 +13,14 @@ Unity 82
 | Eyüp Can Balaban | Developer |
 
 # Oyun İsmi
+Dungeon Run
 
 # Oyun Açıklaması
 Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirerek engellerden kaçar ve ileriye doğru gider. Bazı engellere değilirse kaybedilir. Toplanan coinlerle yeni bir karakter alınabilir. Oyun mobil platforma uygun bir şekilde tasarlandı.        
 
 # Oyun Özellikleri
 - 3D
+- Mobil
 - Endless runner
 - Tek oyunculu
 - Arcade
