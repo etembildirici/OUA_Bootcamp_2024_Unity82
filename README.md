@@ -2,7 +2,9 @@
 
 Unity 82
 
-# Takım Üyeleri
+# Oyun İle İlgili Bilgiler
+
+## Takım Üyeleri
 
 | İsim | Rol |
 |------|-----|
@@ -12,13 +14,13 @@ Unity 82
 | Esra Uğurbaş | Developer |
 | Eyüp Can Balaban | Developer |
 
-# Oyun İsmi
+## Oyun İsmi
 Dungeon Run
 
-# Oyun Açıklaması
+## Oyun Açıklaması
 Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirerek engellerden kaçar ve ileriye doğru gider. Bazı engellere değilirse kaybedilir. Toplanan coinlerle yeni bir karakter alınabilir. Oyun mobil platforma uygun bir şekilde tasarlandı.        
 
-# Oyun Özellikleri
+## Oyun Özellikleri
 - 3D
 - Mobil
 - Endless runner
@@ -26,11 +28,16 @@ Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirere
 - Arcade
 - Casual
   
-# Hedef Kitle
+## Hedef Kitle
 - +7
 
-# Product Backlog URL
+## Product Backlog URL
 
 [Unity 82 Trello Board](https://trello.com/b/vKbr7eas/product-backlog-board)
 
+#Sprint 1
+
+#Sprint 2
+
+#Sprint 3
 
