@@ -2,8 +2,6 @@
 
 Unity 82
 
-# Oyun İle İlgili Bilgiler
-
 ## Takım Üyeleri
 
 | İsim | Rol |
@@ -13,6 +11,8 @@ Unity 82
 | Fahreddin Ekiz | Developer |
 | Esra Uğurbaş | Developer |
 | Eyüp Can Balaban | Developer |
+
+# Oyun İle İlgili Bilgiler
 
 ## Oyun İsmi
 Dungeon Run
