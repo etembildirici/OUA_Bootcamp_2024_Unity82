@@ -176,12 +176,12 @@ MonoBehaviour:
   - {fileID: 8049685037527867568, guid: 922d7828eaee34547beee7dabc729f9f, type: 3}
   - {fileID: 5202401101366663726, guid: 0a2bd4f16a803144b8d0ccba086978e4, type: 3}
   - {fileID: 6243913171591865261, guid: 5e5aa4c16cf86c44f9e1eaff53ab0ff5, type: 3}
-  - {fileID: 685125997689816431, guid: b626fcce70091f6448da4fcceff2cb83, type: 3}
+  - {fileID: 1991085591012630747, guid: b626fcce70091f6448da4fcceff2cb83, type: 3}
   - {fileID: 8759474014481944885, guid: 6da4a0c5dae4751488686541ef48f19e, type: 3}
-  - {fileID: 5520033451822697264, guid: 1a03ad438cd49584daccb83b699e5024, type: 3}
+  - {fileID: 1295703662823361656, guid: 1a03ad438cd49584daccb83b699e5024, type: 3}
   player: {fileID: 0}
   spawnDistance: 20
-  tilesToShow: 10
+  tilesToShow: 40
   level: {fileID: 1943276313}
   startTile: {fileID: 1812069341}
 --- !u!1 &384495781
@@ -269,13 +269,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384495781}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalRotation: {x: 0.342762, y: -0, z: -0, w: 0.93942225}
+  m_LocalPosition: {x: -2, y: 15, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40.09, y: 0, z: 0}
 --- !u!1001 &980895767
 PrefabInstance:
   m_ObjectHideFlags: 0
