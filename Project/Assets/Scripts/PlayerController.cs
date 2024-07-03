@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         if (transform.position != new Vector3(curPosition.x, transform.position.y, curPosition.z) + nextDir)
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(curPosition.x, transform.position.y, curPosition.z) + nextDir, speed * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(Quaternion.Euler(0,rotationOffset,0)*nextDir), speedRot * Time.deltaTime);
+           // transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(Quaternion.Euler(0,rotationOffset,0)*nextDir), speedRot * Time.deltaTime);
         }
         else
         {
