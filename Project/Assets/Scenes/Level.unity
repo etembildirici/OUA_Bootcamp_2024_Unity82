@@ -178,7 +178,7 @@ MonoBehaviour:
   - {fileID: 6243913171591865261, guid: 5e5aa4c16cf86c44f9e1eaff53ab0ff5, type: 3}
   - {fileID: 1991085591012630747, guid: b626fcce70091f6448da4fcceff2cb83, type: 3}
   - {fileID: 8759474014481944885, guid: 6da4a0c5dae4751488686541ef48f19e, type: 3}
-  - {fileID: 1295703662823361656, guid: 1a03ad438cd49584daccb83b699e5024, type: 3}
+  - {fileID: 8756774765185747544, guid: 1a03ad438cd49584daccb83b699e5024, type: 3}
   player: {fileID: 0}
   spawnDistance: 20
   tilesToShow: 40
