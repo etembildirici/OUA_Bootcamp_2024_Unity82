@@ -39,24 +39,24 @@ Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirere
 
 # Sprint 1
 
-- Sprint Notları: User story’ler product Backlog’ların içine yazılmıştır. Backlog item’lara tıklandığında hikayelerin ayrıntıları okunabilir.
+- **Sprint Notları:** User story’ler product Backlog’ların içine yazılmıştır. Backlog item’lara tıklandığında hikayelerin ayrıntıları okunabilir.
 
-- Sprint içinde tamamlanması tahmin edilen puan:  21 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan:**  21 Puan
 
-- Puan tamamlama mantığı: Proje boyunca tamamlanması tahmin edilen puan  54  olarak belirlenmiştir. Buna göre her sprint için en az 18 puan toplanması hedeflenmektedir.
+- **Puan tamamlama mantığı:** Proje boyunca tamamlanması tahmin edilen puan  54  olarak belirlenmiştir. Buna göre her sprint için en az 18 puan toplanması hedeflenmektedir.
 
-- Backlog düzeni ve story seçimleri:  Product Backlog, oyunumuzun oluşması için gereken temel görevlere dayanarak düzenlenmiştir. Temel görevler için hikayeler oluşturulmuş ve task’lere bölünerek detaylandırılmıştır. Hikayeler puanlanırken Fibonacci dizisi kullanılmıştır ve en yüksek puanlı hikaye 13’ü geçmemektedir.
+- **Backlog düzeni ve story seçimleri:**  Product Backlog, oyunumuzun oluşması için gereken temel görevlere dayanarak düzenlenmiştir. Temel görevler için hikayeler oluşturulmuş ve task’lere bölünerek detaylandırılmıştır. Hikayeler puanlanırken Fibonacci dizisi kullanılmıştır ve en yüksek puanlı hikaye 13’ü geçmemektedir.
 
 Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar da task'leri temsil eder.
 
-- Daily Scrum: Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
+- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
   
-- Sprint board update: Sprint board screenshotları:
+- **Sprint board update:** Sprint board screenshotları:
 
-- Ürün durumu: Ekran Görüntüleri: 
+- **Ürün durumu:** Ekran Görüntüleri: 
 
-- Sprint review:
-- Sprint retrospective:
+- **Sprint review:**
+- **Sprint retrospective:**
 
 # Sprint 2
 
