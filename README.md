@@ -35,10 +35,24 @@ Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirere
 
 ## Product Backlog URL
 
-[Unity 82 Trello Board](https://trello.com/invite/calismaalani41388728/ATTIb1399d66a6f99d4061eac73364982ba45D654F50)
+[Unity 82 Trello Board](https://trello.com/invite/u82backlogboard/ATTIb1399d66a6f99d4061eac73364982ba45D654F50)
 
 # Sprint 1
 
+- Sprint Notları: User story’ler product Backlog’ların içine yazılmıştır. Backlog item’lara tıklandığında hikayelerin ayrıntıları okunabilir.
+
+- Sprint içinde tamamlanması tahmin edilen puan:  21 Puan
+
+- Puan tamamlama mantığı: Proje boyunca tamamlanması tahmin edilen puan  54  olarak belirlenmiştir. Buna göre her sprint için en az 18 puan toplanması hedeflenmektedir.
+
+- Backlog düzeni ve story seçimleri:  Product Backlog, oyunumuzun oluşması için gereken temel görevlere dayanarak düzenlenmiştir. Temel görevler için hikayeler oluşturulmuş ve task’lere bölünerek detaylandırılmıştır. Hikayeler puanlanırken Fibonacci dizisi kullanılmıştır ve en yüksek puanlı hikaye 13’ü geçmemektedir.
+
+Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar da task'leri temsil eder.
+
+- Daily Scrum: Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ihtiyaç halinde ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
+  
+- Sprint board update: Sprint board screenshotları:
+  
 # Sprint 2
 
 # Sprint 3
