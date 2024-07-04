@@ -326,7 +326,7 @@ MonoBehaviour:
   - {fileID: 6428591156001738007, guid: aa38537be319c694d830256dc3eb0d47, type: 3}
   - {fileID: 1599858127893381517, guid: d4cd4fda118109e4eb1c566c91eccd8b, type: 3}
   player: {fileID: 261468309}
-  spawnDistance: 20
+  spawnDistance: 30
   tilesToShow: 20
   level: {fileID: 1943276313}
   startTile: {fileID: 1812069341}
