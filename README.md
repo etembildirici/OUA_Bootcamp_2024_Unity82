@@ -35,7 +35,7 @@ Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirere
 
 ## Product Backlog URL
 
-[Unity 82 Trello Board](https://trello.com/b/vKbr7eas/sprint-1](https://trello.com/invite/calismaalani41388728/ATTIb1399d66a6f99d4061eac73364982ba45D654F50)
+[Unity 82 Trello Board](https://trello.com/invite/calismaalani41388728/ATTIb1399d66a6f99d4061eac73364982ba45D654F50)
 
 # Sprint 1
 
