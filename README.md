@@ -55,6 +55,10 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 - **Ürün durumu:** Ekran Görüntüleri: 
 
+![board1](sprint1documents/board1.png)
+
+![board2](sprint1documents/board2.png)
+
 - **Sprint review:**
 - **Sprint retrospective:**
 
