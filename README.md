@@ -49,10 +49,15 @@ Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirere
 
 Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar da task'leri temsil eder.
 
-- Daily Scrum: Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ihtiyaç halinde ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
+- Daily Scrum: Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
   
 - Sprint board update: Sprint board screenshotları:
-  
+
+- Ürün durumu: Ekran Görüntüleri: 
+
+- Sprint review:
+- Sprint retrospective:
+
 # Sprint 2
 
 # Sprint 3
