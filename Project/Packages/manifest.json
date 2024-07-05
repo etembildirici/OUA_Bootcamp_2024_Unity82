@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.unity.2d.animation": "9.1.1",
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.2d.spriteshape": "9.0.3",
     "com.unity.collab-proxy": "2.4.3",
     "com.unity.device-simulator.devices": "1.0.0",
     "com.unity.feature.mobile": "1.0.0",
