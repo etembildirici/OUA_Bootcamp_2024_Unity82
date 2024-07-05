@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 261468309}
   followSpeed: 2
-  offset: {x: 3, y: 27, z: -15}
+  offset: {x: 3, y: 27, z: -22.5}
 --- !u!1001 &980895767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -567,6 +567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862199589229920910, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
