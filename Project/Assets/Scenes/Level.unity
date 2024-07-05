@@ -271,7 +271,8 @@ Transform:
   m_LocalPosition: {x: 1, y: 2, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 384495784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339383914
@@ -323,8 +324,8 @@ MonoBehaviour:
   - {fileID: 5202401101366663726, guid: 0a2bd4f16a803144b8d0ccba086978e4, type: 3}
   - {fileID: 6243913171591865261, guid: 5e5aa4c16cf86c44f9e1eaff53ab0ff5, type: 3}
   - {fileID: 1991085591012630747, guid: b626fcce70091f6448da4fcceff2cb83, type: 3}
-  - {fileID: 6428591156001738007, guid: aa38537be319c694d830256dc3eb0d47, type: 3}
-  - {fileID: 1599858127893381517, guid: d4cd4fda118109e4eb1c566c91eccd8b, type: 3}
+  - {fileID: 3988628738561167286, guid: ec741b47e2389804a8a9728efd4b17f9, type: 3}
+  - {fileID: 5266518161228264034, guid: e908ee513da7633439fb8c7b76c96253, type: 3}
   player: {fileID: 261468309}
   spawnDistance: 30
   tilesToShow: 20
@@ -365,8 +366,8 @@ Camera:
   m_GameObject: {fileID: 384495781}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.32137772, g: 0.3651606, b: 0.4339623, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -415,13 +416,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384495781}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.342762, y: -0, z: -0, w: 0.93942225}
-  m_LocalPosition: {x: -2, y: 15, z: -23}
+  m_LocalRotation: {x: 0.4609795, y: -0.09606527, z: 0.033207543, w: 0.88157064}
+  m_LocalPosition: {x: 0.91, y: 13, z: -3.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 40.09, y: 0, z: 0}
+  m_Father: {fileID: 261468309}
+  m_LocalEulerAnglesHint: {x: 55, y: -14, z: -3}
 --- !u!1001 &980895767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -631,7 +632,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 384495784}
   - {fileID: 1378719928}
   - {fileID: 339383915}
   - {fileID: 1943276314}
