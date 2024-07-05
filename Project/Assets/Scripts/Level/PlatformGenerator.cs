@@ -13,6 +13,7 @@ public class PlatformGenerator : MonoBehaviour
 
     private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablarý tutan kuyruk
     private Vector3 nextSpawnPosition;
+    private GameObject lastSpawnedTile; // Son eklenen prefabý tutmak için deðiþken
 
     void Start()
     {
@@ -37,8 +38,24 @@ public class PlatformGenerator : MonoBehaviour
     void SpawnTile()
     {
         GameObject newTile = Instantiate(prefabs[Random.Range(0, prefabs.Count)], nextSpawnPosition, Quaternion.identity, level.transform);
+
+        if (lastSpawnedTile != null)
+        {
+            if (lastSpawnedTile.CompareTag("FloorGreyBlack02") && newTile.CompareTag("FloorGreyBlack02"))
+            {
+                Destroy(newTile);
+                newTile = Instantiate(prefabs[2], nextSpawnPosition, Quaternion.identity, level.transform);
+            }
+            else if (lastSpawnedTile.CompareTag("FloorGreyBlack01") && newTile.CompareTag("FloorGreyBlack01"))
+            {
+                Destroy(newTile);
+                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
+            }
+        }
+
         activeTiles.Enqueue(newTile);
         nextSpawnPosition += GetPrefabSize(newTile);
+        lastSpawnedTile = newTile;
     }
 
     void DespawnTile()
