@@ -254,7 +254,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 261468309}
   followSpeed: 2
-  offset: {x: 3, y: 27, z: -22.5}
+  offset: {x: 4, y: 32, z: -22.5}
 --- !u!1001 &980895767
 PrefabInstance:
   m_ObjectHideFlags: 0
