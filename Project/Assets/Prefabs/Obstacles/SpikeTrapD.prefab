@@ -261,8 +261,8 @@ GameObject:
   - component: {fileID: 33776582947446772}
   - component: {fileID: 23248802485315498}
   - component: {fileID: 95846521961778924}
-  - component: {fileID: 114953712324284294}
   - component: {fileID: 254225507008644362}
+  - component: {fileID: 6625290840221746380}
   m_Layer: 0
   m_Name: SpikeTrapD
   m_TagString: Untagged
@@ -365,19 +365,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &114953712324284294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498791207746926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbfc9ddd4ef5c6f47afe9453d93658aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spikeTrapAnim: {fileID: 0}
 --- !u!64 &254225507008644362
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -400,6 +387,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1bb56df4b9ba24840bbfe7e3f0cec5b8, type: 3}
+--- !u!114 &6625290840221746380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498791207746926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b704d03feb03e442ada20ac58eddf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeTrapAnim: {fileID: 0}
+  openCloseDelay: 2
+  startDelay: 2
 --- !u!1 &1533954398984724
 GameObject:
   m_ObjectHideFlags: 0
