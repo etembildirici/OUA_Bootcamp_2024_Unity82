@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 1365063150147587818}
   - component: {fileID: 6344265988045255094}
   - component: {fileID: 619109896101603674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCube
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -152,6 +152,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16
   detectionDistance: 2
+  sinkingSpeed: 0.5
 --- !u!1 &5540005966205260580
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ GameObject:
   - component: {fileID: 7689373013993215270}
   - component: {fileID: 8702182890675461556}
   - component: {fileID: 8862199589229920910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

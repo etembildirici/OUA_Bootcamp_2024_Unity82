@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8708488327677679439}
+  - component: {fileID: 651449917960911847}
   m_Layer: 0
   m_Name: River
   m_TagString: Untagged
@@ -41,6 +42,27 @@ Transform:
   - {fileID: 9210592629511937226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651449917960911847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3988628738561167286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b5a91cd89cc3f408599bae912c3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridPrefabs:
+  - {fileID: 2189132339697593569, guid: 017f544ab67ca124cb93438d263ba29a, type: 3}
+  - {fileID: 3717067902342885291, guid: 1713477acc2891940b7753f5697d697a, type: 3}
+  minGridSpacing: 10
+  maxGridSpacing: 20
+  riverLength: 40
+  gridLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1423250637644940453
 PrefabInstance:
   m_ObjectHideFlags: 0

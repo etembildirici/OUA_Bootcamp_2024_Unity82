@@ -8,6 +8,7 @@ TagManager:
   - FloorGreyBlack02
   - Water
   - water
+  - Grid
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Grid
   - 
   - 
   - 
