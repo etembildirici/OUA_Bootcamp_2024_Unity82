@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 33590936483850994}
   - component: {fileID: 23165290686756232}
   - component: {fileID: 7762604448997935816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TrapDoorLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 33097653301777148}
   - component: {fileID: 23612837725303508}
   - component: {fileID: 4473276188464722744}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TrapDoorRD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,11 +6,13 @@ TagManager:
   tags:
   - FloorGreyBlack01
   - FloorGreyBlack02
+  - Water
+  - water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

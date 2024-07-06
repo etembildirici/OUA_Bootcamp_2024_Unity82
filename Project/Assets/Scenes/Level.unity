@@ -563,6 +563,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 619109896101603674, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1365063150147587818, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
         type: 3}
       propertyPath: groundY
