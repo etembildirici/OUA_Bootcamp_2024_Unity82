@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1365063150147587818}
   - component: {fileID: 6344265988045255094}
   - component: {fileID: 619109896101603674}
+  - component: {fileID: 785057613302357798}
   m_Layer: 6
   m_Name: PlayerCube
   m_TagString: Grid
@@ -107,8 +108,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.5101547, z: 1}
+  m_Center: {x: 0, y: -0.25507736, z: 0}
 --- !u!114 &1365063150147587818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +154,33 @@ MonoBehaviour:
     m_Bits: 16
   detectionDistance: 2
   sinkingSpeed: 0.5
+--- !u!54 &785057613302357798
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976714429682262179}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &5540005966205260580
 GameObject:
   m_ObjectHideFlags: 0

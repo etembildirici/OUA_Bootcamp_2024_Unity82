@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 697865800833509910}
   - component: {fileID: 3679260344332113213}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Grate2
-  m_TagString: Grid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

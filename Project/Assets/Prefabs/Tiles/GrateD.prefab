@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33062554366403250}
   - component: {fileID: 23257188680159154}
   - component: {fileID: -4021090975179613321}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: GrateD
   m_TagString: Grid
   m_Icon: {fileID: 0}
