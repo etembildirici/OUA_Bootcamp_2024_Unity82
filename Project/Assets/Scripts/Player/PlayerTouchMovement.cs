@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +11,15 @@ public class PlayerTouchMovement : MonoBehaviour
     public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
     private bool isSwiping = false; // Kaydýrma hareketini takip etmek için bayrak
 
+    private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
+
+    // Karakter hareket ettiðinde çaðrýlacak olay
+    public static event Action OnMoveForward;
+
     void Start()
     {
         nextPosition = transform.position; // Baþlangýçta karakterin bulunduðu pozisyon
+        maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
     }
 
     void Update()
@@ -82,6 +89,13 @@ public class PlayerTouchMovement : MonoBehaviour
 
         // Bir sonraki hedef pozisyonunu güncelleme
         nextPosition = targetPosition;
+
+        // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
+        if (direction == Vector3.forward && transform.position.z > maxZPosition)
+        {
+            maxZPosition = transform.position.z;
+            OnMoveForward?.Invoke();
+        }
     }
     /*
     public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi

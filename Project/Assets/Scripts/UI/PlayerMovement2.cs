@@ -9,11 +9,14 @@ namespace Player
         private Vector3 nextPosition; // Karakterin bir sonraki hedef pozisyonu
 
         // Karakter hareket ettiğinde çağrılacak olay
-        public static event Action OnMove;
+        public static event Action OnMoveForward; // Sadece ileri hareketler için
+
+        private float maxZPosition; // Karakterin ulaştığı en yüksek z pozisyonu
 
         void Start()
         {
             nextPosition = transform.position; // Başlangıçta karakterin bulunduğu pozisyon
+            maxZPosition = transform.position.z; // Başlangıç z pozisyonu
         }
 
         void Update()
@@ -48,8 +51,12 @@ namespace Player
             // Bir sonraki hedef pozisyonunu güncelleme
             nextPosition = targetPosition;
 
-            // Hareket olayını tetikleme
-            OnMove?.Invoke();
+            // Eğer ileriye doğru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayını tetikle
+            if (direction == Vector3.forward && transform.position.z > maxZPosition)
+            {
+                maxZPosition = transform.position.z;
+                OnMoveForward?.Invoke();
+            }
         }
     }
 }

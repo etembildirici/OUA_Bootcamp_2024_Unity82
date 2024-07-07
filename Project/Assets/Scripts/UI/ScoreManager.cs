@@ -16,32 +16,32 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerMovement2.OnMove += MoveHandler;
+        PlayerTouchMovement.OnMoveForward += MoveForwardHandler;
     }
 
     private void OnDisable()
     {
-        PlayerMovement2.OnMove -= MoveHandler;
+        PlayerTouchMovement.OnMoveForward -= MoveForwardHandler;
     }
 
     private void Start()
     {
         score = 0;
-        maxScore = PlayerPrefs.GetInt("MaxScore", 0);
+        maxScore = PlayerPrefs.GetInt("Max", 0);
         isPaused = false;
         UpdateUI();
 
         // Butonun başlangıç metnini ayarlayın
-        buttonText.text = "Pause";
+        buttonText.text = " ";
     }
 
-    private void MoveHandler()
+    private void MoveForwardHandler()
     {
         score++;
         if (score > maxScore)
         {
             maxScore = score;
-            PlayerPrefs.SetInt("MaxScore", maxScore);
+            PlayerPrefs.SetInt("Max", maxScore);
         }
         UpdateUI();
     }
@@ -49,7 +49,7 @@ public class ScoreManager : MonoBehaviour
     private void UpdateUI()
     {
         scoreText.text = "Score: " + score;
-        maxScoreText.text = "Max Score: " + maxScore;
+        maxScoreText.text = "Max: " + maxScore;
     }
 
     public void TogglePauseResume()
@@ -68,14 +68,14 @@ public class ScoreManager : MonoBehaviour
     {
         Time.timeScale = 0;
         isPaused = true;
-        buttonText.text = "Resume";
+        buttonText.text = " ";
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         isPaused = false;
-        buttonText.text = "Pause";
+        buttonText.text = " ";
     }
 }
 
