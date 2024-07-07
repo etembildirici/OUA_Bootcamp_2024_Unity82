@@ -63,6 +63,8 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 ![game1](sprint1documents/game1.png)
 
+![game](sprint1documents/game.PNG)
+
 - **Sprint review:**
 - **Sprint retrospective:**
 
