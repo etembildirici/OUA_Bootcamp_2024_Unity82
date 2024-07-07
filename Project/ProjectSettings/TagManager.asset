@@ -9,6 +9,7 @@ TagManager:
   - Water
   - water
   - Grid
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Grid
-  - 
+  - Player
   - 
   - 
   - 

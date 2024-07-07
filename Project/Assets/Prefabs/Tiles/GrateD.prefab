@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4021090975179613321}
   m_Layer: 3
   m_Name: GrateD
-  m_TagString: Grid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
