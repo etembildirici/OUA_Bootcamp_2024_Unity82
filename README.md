@@ -66,7 +66,24 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 ![game](sprint1documents/game.PNG)
 
 - **Sprint review:**
+  
+- Coin ve sandık eklemenin 3. sprintte yapılmasına karar verildi. Puanlamada değişiklik yapılmasına karar verildi.
+  
+- Oyuna yeni hareketli ve sabit engellerin eklenecek.
+
+- Oyun arayüz tasarımı değiştirilecek.
+  
+- Sprint Review katılımcıları: Etem Zemci Bildirici, Fatime Emin, Fahreddin Ekiz 
+
 - **Sprint retrospective:**
+
+- Daily scrum aktif olarak yapılacak. Herkes aldığı görevlerle ilgili günlük bilgilendirme yapacak.
+
+- Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+
+- Level tasarımı için gereken çoğu görev tamamlandı.
+
+- Karakter hareket mekaniği eklendi. Mobil entegrasyonu yapıldı. 
 
 # Sprint 2
 
