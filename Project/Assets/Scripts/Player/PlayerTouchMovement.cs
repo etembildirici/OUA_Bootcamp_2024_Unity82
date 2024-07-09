@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerTouchMovement : MonoBehaviour
 {
+
     public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
     private Vector3 nextPosition; // Karakterin bir sonraki hedef pozisyonu
     private Vector2 startTouchPosition, endTouchPosition;
@@ -78,8 +79,8 @@ public class PlayerTouchMovement : MonoBehaviour
             }
         }
     }
-    
-    /* private void OnTriggerEnter(Collider other)
+    /*
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Grid"))
         {
@@ -95,7 +96,8 @@ public class PlayerTouchMovement : MonoBehaviour
             transform.parent = null;
             Debug.Log("Karakter su üzerindeki gridin üzerine bindi.");
         }
-    } */
+    } 
+    */
 
     void Move(Vector3 direction)
     {
@@ -115,6 +117,7 @@ public class PlayerTouchMovement : MonoBehaviour
             OnMoveForward?.Invoke();
         }
     }
+
     /*
     public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
     private Vector3 nextPosition; // Karakterin bir sonraki hedef pozisyonu

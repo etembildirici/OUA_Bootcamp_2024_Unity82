@@ -10,6 +10,7 @@ TagManager:
   - water
   - Grid
   - Spike
+  - Tile
   layers:
   - Default
   - TransparentFX
