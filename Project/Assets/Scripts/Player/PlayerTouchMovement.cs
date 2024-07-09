@@ -78,6 +78,24 @@ public class PlayerTouchMovement : MonoBehaviour
             }
         }
     }
+    
+    /* private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Grid"))
+        {
+            transform.parent = other.transform;
+            Debug.Log("Karakter su üzerindeki gridin üzerine bindi.");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Grid"))
+        {
+            transform.parent = null;
+            Debug.Log("Karakter su üzerindeki gridin üzerine bindi.");
+        }
+    } */
 
     void Move(Vector3 direction)
     {
