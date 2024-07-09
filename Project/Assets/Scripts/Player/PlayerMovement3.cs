@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement3 : MonoBehaviour
 {
     private int leftSteps = 0;
     private int rightSteps = 0;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Grid"))
         {
             transform.parent = other.transform;
-            transform.localPosition = new Vector3(0, 0.5f, 0); // Karakteri gridin merkezine ve y=0.5 konumuna ayarla
+            transform.localPosition = new Vector3(0, transform.localPosition.y, 0); // Karakteri gridin merkezine ve y=0.5 konumuna ayarla
             Debug.Log("Karakter su üzerindeki gridin üzerine bindi.");
         }
     }
