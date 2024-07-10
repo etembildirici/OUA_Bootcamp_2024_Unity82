@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSpikeDetection : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerSpikeDetection : MonoBehaviour
             GetComponent<PlayerTouchMovement>().enabled = false;
             isHitBySpike = true;
             Debug.Log("Karakter mýzraða çarptý.");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

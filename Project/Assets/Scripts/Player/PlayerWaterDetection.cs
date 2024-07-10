@@ -17,6 +17,7 @@ public class PlayerWaterDetection : MonoBehaviour
             DetectWater();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Water"))
