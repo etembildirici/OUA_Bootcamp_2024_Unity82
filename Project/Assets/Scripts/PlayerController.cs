@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,7 +43,23 @@ public class PlayerController : MonoBehaviour
             Move();
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Spike"))
+        {
+            Debug.Log("Player collided with obstacle!");
 
+            // Oyunu yeniden baþlat
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (other.CompareTag("Water"))
+        {
+            Debug.Log("Player collided with obstacle!");
+
+            // Oyunu yeniden baþlat
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
     void Move()
     {
         if (IsGrounded())  // Eðer karakter yerdeyse, yalnýzca o zaman zýplama kuvveti uygula
