@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerWaterDetection : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class PlayerWaterDetection : MonoBehaviour
         if (!isSinking)
         {
             DetectWater();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            Debug.Log("Player collided with obstacle!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

@@ -25,12 +25,5 @@ public class RestartGame : MonoBehaviour
             // Oyunu yeniden baþlat
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (other.CompareTag("Water"))
-        {
-            Debug.Log("Player collided with obstacle!");
-
-            // Oyunu yeniden baþlat
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 }
