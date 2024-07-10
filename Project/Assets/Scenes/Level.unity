@@ -1160,12 +1160,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6857243137743292503}
   - component: {fileID: 6860109849892754560}
+  - component: {fileID: 7445671335399561519}
   - component: {fileID: 8034720941984970939}
   - component: {fileID: 515367198527748937}
-  - component: {fileID: 7445671335399561519}
   - component: {fileID: 5284432541501456586}
-  - component: {fileID: 8034720941984970940}
   - component: {fileID: 8034720941984970941}
+  - component: {fileID: 8034720941984970942}
   m_Layer: 6
   m_Name: Player
   m_TagString: Grid
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 2
   swipeThreshold: 50
---- !u!114 &8034720941984970940
+--- !u!114 &8034720941984970941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1223,10 +1223,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7022323956866147430}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e2dbd7cd8bf584b865c1809109e9ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 190c1f33b4a2a0f4ba7c34acf5731c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8034720941984970941
+--- !u!114 &8034720941984970942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7022323956866147430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190c1f33b4a2a0f4ba7c34acf5731c86, type: 3}
+  m_Script: {fileID: 11500000, guid: ccb7892a98e11ed4b8314659efcb5695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8063109914462798937
