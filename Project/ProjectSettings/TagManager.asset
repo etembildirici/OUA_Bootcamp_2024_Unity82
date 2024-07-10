@@ -11,6 +11,7 @@ TagManager:
   - Grid
   - Spike
   - Tile
+  - Door
   layers:
   - Default
   - TransparentFX

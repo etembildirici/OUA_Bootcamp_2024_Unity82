@@ -38,6 +38,11 @@ public class PlayerWaterDetection : MonoBehaviour
 
         foreach (var hit in hits)
         {
+            if (hit.collider.CompareTag("Door"))
+            {
+                continue; // "Door" tag'li nesneleri es geç
+            }
+
             if (hit.collider.CompareTag("Water"))
             {
                 isWaterDetected = true;
