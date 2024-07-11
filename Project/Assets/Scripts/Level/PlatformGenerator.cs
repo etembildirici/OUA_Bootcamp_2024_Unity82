@@ -53,16 +53,6 @@ public class PlatformGenerator : MonoBehaviour
             }
         }
 
-        // Sadece FloorGreyBlack01 ve FloorGreyBlack02 tag'ine sahip Tile prefab'larına sabit engeller ekleyin
-        if (newTile.CompareTag("FloorGreyBlack01") || newTile.CompareTag("FloorGreyBlack02"))
-        {
-            RoadSegment roadSegment = newTile.GetComponent<RoadSegment>();
-            if (roadSegment != null)
-            {
-                roadSegment.PlaceObstacles();
-            }
-        }
-
         activeTiles.Enqueue(newTile);
         nextSpawnPosition += GetPrefabSize(newTile);
         lastSpawnedTile = newTile;
