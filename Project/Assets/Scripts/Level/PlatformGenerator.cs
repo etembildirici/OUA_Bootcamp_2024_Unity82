@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour
 {
-    public List<GameObject> prefabs; // Prefablarýnýzý buraya ekleyin
+    public List<GameObject> prefabs; // Prefablar?n?z? buraya ekleyin
     public Transform player; // Oyuncunun transform'u
-    public float spawnDistance = 20f; // Oyuncunun önünde spawn edilecek mesafe
-    public int tilesToShow = 5; // Ayný anda gösterilecek tile sayýsý
+    public float spawnDistance = 20f; // Oyuncunun ?n?nde spawn edilecek mesafe
+    public int tilesToShow = 5; // Ayn? anda g?sterilecek tile say?s?
     public GameObject level; // Level GameObject
-    public GameObject startTile; // Oyunun baþlangýç noktasý olan prefab
+    public GameObject startTile; // Oyunun ba?lang?? noktas? olan prefab
 
-    private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablarý tutan kuyruk
+    private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablar? tutan kuyruk
     private Vector3 nextSpawnPosition;
-    private GameObject lastSpawnedTile; // Son eklenen prefabý tutmak için deðiþken
+    private GameObject lastSpawnedTile; // Son eklenen prefab? tutmak i?in de?i?ken
 
     void Start()
     {
-        // Baþlangýç prefabýnýn pozisyonunu al
+        // Ba?lang?? prefab?n?n pozisyonunu al
         nextSpawnPosition = startTile.transform.position + GetPrefabSize(startTile);
 
         for (int i = 0; i < tilesToShow; i++)
@@ -53,6 +53,16 @@ public class PlatformGenerator : MonoBehaviour
             }
         }
 
+        // Sadece FloorGreyBlack01 ve FloorGreyBlack02 tag'ine sahip Tile prefab'larÄ±na sabit engeller ekleyin
+        if (newTile.CompareTag("FloorGreyBlack01") || newTile.CompareTag("FloorGreyBlack02"))
+        {
+            RoadSegment roadSegment = newTile.GetComponent<RoadSegment>();
+            if (roadSegment != null)
+            {
+                roadSegment.PlaceObstacles();
+            }
+        }
+
         activeTiles.Enqueue(newTile);
         nextSpawnPosition += GetPrefabSize(newTile);
         lastSpawnedTile = newTile;
@@ -72,11 +82,11 @@ public class PlatformGenerator : MonoBehaviour
         Renderer renderer = prefab.GetComponent<Renderer>();
         if (renderer != null)
         {
-            return new Vector3(0, 0, renderer.bounds.size.x); // Prefabýn kýsa kenarýný hesaplayarak z ekseninde ileri taþý
+            return new Vector3(0, 0, renderer.bounds.size.x); // Prefab?n k?sa kenar?n? hesaplayarak z ekseninde ileri ta??
         }
         else
         {
-            return Vector3.forward * 2; // Varsayýlan deðer
+            return Vector3.forward * 2; // Varsay?lan de?er
         }
     }
 }
