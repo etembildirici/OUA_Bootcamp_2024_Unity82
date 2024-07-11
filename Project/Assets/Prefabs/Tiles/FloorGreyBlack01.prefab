@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fixedObstacles:
   - {fileID: 2596538020530798546, guid: 97806057c70cc40d6a383a49b7136b27, type: 3}
-  - {fileID: 2272738402884601943, guid: f8ec2e68655e44a2b8673a93d7bb2a2d, type: 3}
   - {fileID: 7465451909791228433, guid: 97d6130ff85acc54f84a1eb3a71621b5, type: 3}
   gridWidth: 10
 --- !u!1001 &52266733045184479
