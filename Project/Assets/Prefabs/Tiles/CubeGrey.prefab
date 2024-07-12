@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33917705481123966}
   - component: {fileID: 23053752477688824}
   - component: {fileID: 9009105178898654788}
+  - component: {fileID: -6260926146085684710}
   m_Layer: 0
   m_Name: CubeGrey
   m_TagString: Tile
@@ -106,3 +107,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3141cea43c2a8484c8683d2d65a5d8d8, type: 3}
+--- !u!114 &-6260926146085684710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986053002286778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b1462dc0f5c4972a4c6bd5704bf30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixedObstacles:
+  - {fileID: 1472106140212230329, guid: eedeeebf3e21a8144b1426bbbe10325c, type: 3}
+  obstacleProbability: 0.2

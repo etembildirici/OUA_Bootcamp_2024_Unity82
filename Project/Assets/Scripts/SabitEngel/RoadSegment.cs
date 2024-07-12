@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class RoadSegment : MonoBehaviour
 {
     public GameObject[] fixedObstacles; // Sabit engel prefab'ları
-    public int gridWidth = 10; // Grid'in genişliği (Tile'ların sayısı)
+    public float obstacleProbability = 0.2f; // Engel yerleştirme olasılığı (%20)
 
     private void Start()
     {
@@ -15,21 +14,14 @@ public class RoadSegment : MonoBehaviour
 
     public void PlaceObstacles()
     {
+        // Sabit engelleri belirli pozisyonlara yerleştirin
         foreach (GameObject obstacle in fixedObstacles)
         {
-            Vector3 obstaclePosition = GetRandomGridPosition();
-            Instantiate(obstacle, transform.position + obstaclePosition, Quaternion.identity, transform);
+            if (Random.value < obstacleProbability) // %20 olasılıkla engel yerleştir
+            {
+                Vector3 obstaclePosition = new Vector3(Random.Range(0, 0), 1, Random.Range(0, 0));
+                Instantiate(obstacle, transform.position + obstaclePosition, Quaternion.identity, transform);
+            }
         }
     }
-
-    private Vector3 GetRandomGridPosition()
-    {
-        // Rastgele bir grid pozisyonu belirleme
-        int randomX = Random.Range(0, gridWidth);
-        int randomZ = Random.Range(0, gridWidth);
-        return new Vector3(randomX, -2, randomZ);
-    }
 }
-
-
-
