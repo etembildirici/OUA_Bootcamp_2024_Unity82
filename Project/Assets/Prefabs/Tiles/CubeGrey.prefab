@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 8676769176881801432, guid: 9ffed87dec6e84586abe9a4a1d64dbba, type: 3}
   obstacleProbability: 0.2
   predefinedPositions:
-  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 0, z: 0}
   validTags:
   - FloorGreyBlack01
   - FloorGreyBlack02

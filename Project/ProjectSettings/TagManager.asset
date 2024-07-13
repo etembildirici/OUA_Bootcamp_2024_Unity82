@@ -12,6 +12,7 @@ TagManager:
   - Spike
   - Tile
   - Door
+  - Obstacle
   layers:
   - Default
   - TransparentFX
