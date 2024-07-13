@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6704280168511758299}
   - component: {fileID: 6919881027830601355}
   - component: {fileID: 445824413292637244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlockS01D
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrateD
       objectReference: {fileID: 0}
+    - target: {fileID: 1656729707787810, guid: 8a61b0f9c401a88499c56369f7d4b194, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4486018891411640, guid: 8a61b0f9c401a88499c56369f7d4b194, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -194,6 +198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmokeD
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883961611733890186, guid: 170b52e0ef9a9f744985ad20e1ae2b4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3885798209429246104, guid: 170b52e0ef9a9f744985ad20e1ae2b4f,
         type: 3}

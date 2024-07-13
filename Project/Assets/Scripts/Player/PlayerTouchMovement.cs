@@ -9,6 +9,7 @@ public class PlayerTouchMovement : MonoBehaviour
     private Vector2 startTouchPosition, endTouchPosition;
     public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
     private bool isSwiping = false; // Kaydýrma hareketini takip etmek için bayrak
+    public LayerMask obstacleLayer; // Engellerin bulunduðu katman
 
     private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
 
@@ -48,11 +49,11 @@ public class PlayerTouchMovement : MonoBehaviour
                         // Yatay kaydýrma
                         if (swipeDirection.x > 0)
                         {
-                            moveCharacter(Vector3.right);
+                            TryMove(Vector3.right);
                         }
                         else
                         {
-                            moveCharacter(Vector3.left);
+                            TryMove(Vector3.left);
                         }
                     }
                     else
@@ -60,21 +61,45 @@ public class PlayerTouchMovement : MonoBehaviour
                         // Dikey kaydýrma
                         if (swipeDirection.y > 0)
                         {
-                            moveCharacter(Vector3.forward);
+                            TryMove(Vector3.forward);
                         }
                         else
                         {
-                            moveCharacter(Vector3.back);
+                            TryMove(Vector3.back);
                         }
                     }
                 }
                 else if (!isSwiping)
                 {
                     // Sadece ekrana týklama durumunda ileri gitme
-                    moveCharacter(Vector3.forward);
+                    TryMove(Vector3.forward);
                 }
             }
         }
+    }
+
+    private void TryMove(Vector3 direction)
+    {
+        // Hedef pozisyonu belirleme
+        Vector3 targetPosition = transform.position + direction * moveDistance;
+
+        // Hedef pozisyonda bir engel olup olmadýðýný kontrol et
+        if (!IsObstacleInDirection(direction))
+        {
+            // Eðer engel yoksa karakteri hedef pozisyona hareket ettir
+            moveCharacter(direction);
+        }
+    }
+
+    private bool IsObstacleInDirection(Vector3 direction)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, direction, out hit, moveDistance, obstacleLayer))
+        {
+            Debug.Log("Engel algýlandý: " + hit.collider.name);
+            return true;
+        }
+        return false;
     }
 
     private void moveCharacter(Vector3 direction)
