@@ -47,7 +47,7 @@ public class RoadSegment : MonoBehaviour
             // Engeli oluştur
             Instantiate(randomObject, transform.position + obstaclePosition, Quaternion.identity, transform);
         }
-        
+
     }
 }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4048552179567704142}
   - component: {fileID: 3321284133826328473}
   - component: {fileID: 6985182337063589963}
-  - component: {fileID: 4502809299164172126}
+  - component: {fileID: 4898327717243269569}
   m_Layer: 8
   m_Name: Barrel
   m_TagString: Obstacle
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4502809299164172126
-MeshCollider:
+--- !u!65 &4898327717243269569
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a93002532b627ed4f9f3d9c378d1e52c, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 1.9, y: 3.197019, z: 1.9}
+  m_Center: {x: 0.00000023841858, y: 1.3991778, z: 0.00000011920929}
