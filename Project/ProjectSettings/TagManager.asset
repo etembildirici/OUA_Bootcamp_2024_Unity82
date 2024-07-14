@@ -12,6 +12,7 @@ TagManager:
   - Spike
   - Tile
   - Door
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Grid
   - Player
-  - 
+  - Obstacle
   - 
   - 
   - 

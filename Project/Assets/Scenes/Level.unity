@@ -952,7 +952,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 239
+    m_Bits: 495
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -1214,6 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 2
   swipeThreshold: 50
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &8034720941984970941
 MonoBehaviour:
   m_ObjectHideFlags: 0
