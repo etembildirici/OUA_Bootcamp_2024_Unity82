@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6527347615898820436}
   - component: {fileID: 4902187374420826219}
   - component: {fileID: 5099103361244630542}
+  - component: {fileID: 8096017503060609856}
   m_Layer: 0
   m_Name: Blade01D
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8096017503060609856
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423873316956216630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 5ced8aeb49e1ee3418b6badab445c36a, type: 3}
 --- !u!1 &2592806857514468685
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +119,7 @@ GameObject:
   - component: {fileID: 2372648356896828201}
   m_Layer: 0
   m_Name: Pole01D
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +258,7 @@ GameObject:
   - component: {fileID: 1267889699846806740}
   m_Layer: 0
   m_Name: Pole01D
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -45,7 +45,7 @@ public class RoadSegment : MonoBehaviour
             Vector3 obstaclePosition = predefinedPosition;
 
             // Engeli oluştur
-            Instantiate(randomObject, transform.position, Quaternion.identity, transform);
+            Instantiate(randomObject, transform.position + obstaclePosition, Quaternion.identity, transform);
         }
         
     }
