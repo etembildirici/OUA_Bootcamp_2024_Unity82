@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4881404980133362}
   - component: {fileID: 95222640213664392}
-  - component: {fileID: 2904910466874247341}
   - component: {fileID: 4858817309465576244}
+  - component: {fileID: 6265441331476160268}
   m_Layer: 0
   m_Name: TrapDoor
   m_TagString: Door
@@ -57,21 +57,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2904910466874247341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637446126582564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b686df45fddce4c46a1d41d7e27daeaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trapDoorAnim: {fileID: 0}
-  openCloseDelay: 2
-  startDelay: 2
 --- !u!65 &4858817309465576244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,6 +78,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8842041, y: 0.26154113, z: 1.8957337}
   m_Center: {x: 0.011297584, y: -0.04883188, z: -0.007811129}
+--- !u!114 &6265441331476160268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637446126582564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b686df45fddce4c46a1d41d7e27daeaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapDoorAnim: {fileID: 0}
+  openCloseDelay: 2
+  startDelay: 0
 --- !u!1 &1701452428705890
 GameObject:
   m_ObjectHideFlags: 0

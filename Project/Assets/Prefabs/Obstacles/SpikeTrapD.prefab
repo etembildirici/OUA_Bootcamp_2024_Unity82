@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 23248802485315498}
   - component: {fileID: 95846521961778924}
   - component: {fileID: 254225507008644362}
-  - component: {fileID: 6625290840221746380}
+  - component: {fileID: 8874954609897505284}
   m_Layer: 0
   m_Name: SpikeTrapD
   m_TagString: Tile
@@ -456,7 +456,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1bb56df4b9ba24840bbfe7e3f0cec5b8, type: 3}
---- !u!114 &6625290840221746380
+--- !u!114 &8874954609897505284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
