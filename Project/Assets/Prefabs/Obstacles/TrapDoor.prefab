@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trapDoorAnim: {fileID: 0}
   openCloseDelay: 2
-  startDelay: 0
+  startDelay: 2
 --- !u!1 &1701452428705890
 GameObject:
   m_ObjectHideFlags: 0

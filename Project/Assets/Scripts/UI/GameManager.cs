@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        Time.timeScale = 0; // Oyunu durdur
+        //Time.timeScale = 0; // Oyunu durdur
         restartButton.SetActive(true); // Yeniden başlama butonunu göster
     }
 
     public void RestartGame()
     {
-        Time.timeScale = 1; // Oyunu devam ettir
+        //Time.timeScale = 1; // Oyunu devam ettir
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Sahneyi yeniden yükle
     }
 }
