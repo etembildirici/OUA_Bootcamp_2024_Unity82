@@ -5,25 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameManager gameManager; // GameManager referans?
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Spike"))
+        if (other.CompareTag("Spike") || other.CompareTag("Water"))
         {
             Debug.Log("Player collided with obstacle!");
-
-            // Oyunu yeniden baþlat
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.EndGame(); // Oyunu durdur ve yeniden ba?lama butonunu g?ster
         }
     }
 }

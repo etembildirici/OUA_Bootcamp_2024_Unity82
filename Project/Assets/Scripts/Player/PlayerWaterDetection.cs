@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerWaterDetection : MonoBehaviour
 {
-    public LayerMask waterLayer; // Su katmanýný belirleyin
+    public LayerMask waterLayer; // Su katman?n? belirleyin
     public float detectionDistance = 1f; // Su tespit mesafesi
-    public float sinkingSpeed = 0.5f; // Karakterin suya düþme hýzý
+    public float sinkingSpeed = 0.5f; // Karakterin suya d??me h?z?
     private bool isSinking = false;
 
     void Update()
@@ -18,18 +18,18 @@ public class PlayerWaterDetection : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Water"))
         {
             Debug.Log("Player collided with obstacle!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-    }
+    }*/
 
     void DetectWater()
     {
-        // Karakterin altýna doðru bir ray gönderin
+        // Karakterin alt?na do?ru bir ray g?nderin
         Ray ray = new Ray(transform.position, Vector3.down);
         RaycastHit[] hits = Physics.RaycastAll(ray, detectionDistance);
 
@@ -40,7 +40,7 @@ public class PlayerWaterDetection : MonoBehaviour
         {
             if (hit.collider.CompareTag("Door"))
             {
-                continue; // "Door" tag'li nesneleri es geç
+                continue; // "Door" tag'li nesneleri es ge?
             }
 
             if (hit.collider.CompareTag("Water"))
@@ -53,21 +53,21 @@ public class PlayerWaterDetection : MonoBehaviour
             }
         }
 
-        // Eðer sadece suya temas ediyorsa ve altýnda baþka bir nesne yoksa
+        // E?er sadece suya temas ediyorsa ve alt?nda ba?ka bir nesne yoksa
         if (isWaterDetected && !isNonWaterDetected)
         {
-            // Karakterin yüksekliðine göre suya düþme iþlemlerini burada gerçekleþtirin
-            Debug.Log("Suya düþtü!");
+            // Karakterin y?ksekli?ine g?re suya d??me i?lemlerini burada ger?ekle?tirin
+            Debug.Log("Suya d??t?!");
             StartSinking();
         }
     }
 
     void StartSinking()
     {
-        // Hareket scriptini devre dýþý býrak
+        // Hareket scriptini devre d??? b?rak
         GetComponent<PlayerTouchMovement>().enabled = false;
 
-        // Karakteri suya batýrma iþlemini baþlat
+        // Karakteri suya bat?rma i?lemini ba?lat
         isSinking = true;
         StartCoroutine(Sink());
     }
@@ -76,10 +76,10 @@ public class PlayerWaterDetection : MonoBehaviour
     {
         while (true)
         {
-            // Karakterin y pozisyonunu yavaþça azalt
+            // Karakterin y pozisyonunu yava??a azalt
             transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
 
-            // Belirli bir süre bekle
+            // Belirli bir s?re bekle
             yield return null;
         }
     }
