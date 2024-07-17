@@ -8,7 +8,9 @@ public class PlayerWaterDetection : MonoBehaviour
     public LayerMask waterLayer; // Su katman?n? belirleyin
     public float detectionDistance = 1f; // Su tespit mesafesi
     public float sinkingSpeed = 0.5f; // Karakterin suya d??me h?z?
+    public float sinkingDepth = 8f; // Karakterin düþeceði mesafe
     private bool isSinking = false;
+    private float initialYPosition;
 
     void Update()
     {
@@ -69,18 +71,22 @@ public class PlayerWaterDetection : MonoBehaviour
 
         // Karakteri suya bat?rma i?lemini ba?lat
         isSinking = true;
+        initialYPosition = transform.position.y;
         StartCoroutine(Sink());
     }
 
     IEnumerator Sink()
     {
-        while (true)
+        while (transform.position.y > initialYPosition - sinkingDepth)
         {
-            // Karakterin y pozisyonunu yava??a azalt
+            // Karakterin y pozisyonunu yavaþça azalt
             transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
 
-            // Belirli bir s?re bekle
+            // Belirli bir süre bekle
             yield return null;
         }
+
+        // Belirli bir mesafe düþtükten sonra batmayý durdur
+        isSinking = false;
     }
 }

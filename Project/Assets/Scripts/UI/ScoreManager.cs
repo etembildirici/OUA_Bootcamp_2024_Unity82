@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI maxScoreText;
     public Button pauseResumeButton;
     public TextMeshProUGUI buttonText;
+    public PlayerTouchMovement playerTouchMovement; // PlayerTouchMovement referansı
 
     private int score;
     private int maxScore;
@@ -69,6 +70,12 @@ public class ScoreManager : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         buttonText.text = " ";
+
+        // PlayerTouchMovement scriptini devre dışı bırak
+        if (playerTouchMovement != null)
+        {
+            playerTouchMovement.enabled = false;
+        }
     }
 
     public void ResumeGame()
@@ -76,6 +83,12 @@ public class ScoreManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         buttonText.text = " ";
+
+        // PlayerTouchMovement scriptini etkinleştir
+        if (playerTouchMovement != null)
+        {
+            playerTouchMovement.enabled = true;
+        }
     }
 }
 

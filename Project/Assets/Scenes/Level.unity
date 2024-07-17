@@ -1830,6 +1830,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 7888447096137994475, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: playerTouchMovement
+      value: 
+      objectReference: {fileID: 8034720941984970939}
     - target: {fileID: 8178880032252536020, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -38368,6 +38373,7 @@ MonoBehaviour:
     m_Bits: 16
   detectionDistance: 2
   sinkingSpeed: 2
+  sinkingDepth: 5
 --- !u!23 &2020906868141874960
 MeshRenderer:
   m_ObjectHideFlags: 0
