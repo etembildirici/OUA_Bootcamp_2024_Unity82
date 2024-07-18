@@ -12,7 +12,8 @@ public class RestartGame : MonoBehaviour
         if (other.CompareTag("Spike") || other.CompareTag("Water"))
         {
             Debug.Log("Player collided with obstacle!");
-            gameManager.EndGame(); // Oyunu durdur ve yeniden ba?lama butonunu g?ster
+            gameManager.EndGame();// Oyunu durdur ve yeniden ba?lama butonunu g?ster
+
         }
     }
 }
