@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour
 {
-    public List<GameObject> prefabs; // Prefablar?n?z? buraya ekleyin
+    public List<GameObject> prefabs; // Prefablarýnýzý buraya ekleyin
     public Transform player; // Oyuncunun transform'u
-    public float spawnDistance = 20f; // Oyuncunun ?n?nde spawn edilecek mesafe
-    public int tilesToShow = 5; // Ayn? anda g?sterilecek tile say?s?
+    public float spawnDistance = 20f; // Oyuncunun önünde spawn edilecek mesafe
+    public int tilesToShow = 5; // Ayný anda gösterilecek tile sayýsý
     public GameObject level; // Level GameObject
-    public GameObject startTile; // Oyunun ba?lang?? noktas? olan prefab
+    public GameObject startTile; // Oyunun baþlangýç noktasý olan prefab
 
-    private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablar? tutan kuyruk
+    private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablarý tutan kuyruk
     private Vector3 nextSpawnPosition;
-    private GameObject lastSpawnedTile; // Son eklenen prefab? tutmak i?in de?i?ken
+    private GameObject lastSpawnedTile; // Son eklenen prefabý tutmak için deðiþken
 
     void Start()
     {
-        // Ba?lang?? prefab?n?n pozisyonunu al
+        // Baþlangýç prefabýnýn pozisyonunu al
         nextSpawnPosition = startTile.transform.position + GetPrefabSize(startTile);
 
         for (int i = 0; i < tilesToShow; i++)
@@ -37,7 +37,30 @@ public class PlatformGenerator : MonoBehaviour
 
     void SpawnTile()
     {
-        GameObject newTile = Instantiate(prefabs[Random.Range(0, prefabs.Count)], nextSpawnPosition, Quaternion.identity, level.transform);
+        GameObject newTile = null;
+        bool isValidTile = false;
+
+        // Prefab seçimini tekrar yapma döngüsü
+        while (!isValidTile)
+        {
+            newTile = Instantiate(prefabs[Random.Range(0, prefabs.Count)], nextSpawnPosition, Quaternion.identity, level.transform);
+
+            if (newTile.CompareTag("Trap"))
+            {
+                if (Random.value <= 0.2f) // %10 olasýlýkla "Trap" prefabý seçilsin
+                {
+                    isValidTile = true;
+                }
+                else
+                {
+                    Destroy(newTile); // %90 olasýlýkla "Trap" prefabýný yok et ve tekrar dene
+                }
+            }
+            else
+            {
+                isValidTile = true; // Diðer prefablar için doðrudan kabul
+            }
+        }
 
         if (lastSpawnedTile != null)
         {
@@ -72,11 +95,11 @@ public class PlatformGenerator : MonoBehaviour
         Renderer renderer = prefab.GetComponent<Renderer>();
         if (renderer != null)
         {
-            return new Vector3(0, 0, renderer.bounds.size.x); // Prefab?n k?sa kenar?n? hesaplayarak z ekseninde ileri ta??
+            return new Vector3(0, 0, renderer.bounds.size.x); // Prefabýn kýsa kenarýný hesaplayarak z ekseninde ileri taþý
         }
         else
         {
-            return Vector3.forward * 2; // Varsay?lan de?er
+            return Vector3.forward * 2; // Varsayýlan deðer
         }
     }
 }
