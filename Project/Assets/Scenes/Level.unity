@@ -1742,6 +1742,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 5783530023812848118, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 160
+      objectReference: {fileID: 0}
     - target: {fileID: 6184912806356067913, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: m_Type
@@ -11710,6 +11715,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741192546}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &755026570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6279241945062380020, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &756820883
 GameObject:
   m_ObjectHideFlags: 0
@@ -20530,6 +20547,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4011387751307620, guid: ebd40ddc8b7a7d04ca07ec48b1c54d3e,
     type: 3}
   m_PrefabInstance: {fileID: 1304337212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1306704658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6010873632154719028, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1308368066
 GameObject:
@@ -31561,9 +31584,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
         type: 3}
+      propertyPath: maxScoreText
+      value: 
+      objectReference: {fileID: 755026570}
+    - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
+        type: 3}
       propertyPath: restartButton
       value: 
       objectReference: {fileID: 557324974}
+    - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
+        type: 3}
+      propertyPath: pauseResumeButton
+      value: 
+      objectReference: {fileID: 1306704658}
     - target: {fileID: 6708215024600477326, guid: eff4784b256bc4bb39dc28a0fd09f574,
         type: 3}
       propertyPath: m_LocalPosition.x
