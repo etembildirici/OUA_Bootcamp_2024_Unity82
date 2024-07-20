@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerTouchMovement : MonoBehaviour
 {
+    Animator characterAnim;
     public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
     private Vector2 startTouchPosition, endTouchPosition;
     public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
@@ -18,6 +19,7 @@ public class PlayerTouchMovement : MonoBehaviour
 
     void Start()
     {
+        characterAnim = GetComponent<Animator>();
         maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
     }
 
