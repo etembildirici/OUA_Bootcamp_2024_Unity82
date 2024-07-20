@@ -87,5 +87,27 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 # Sprint 2
 
+- **Sprint içinde tamamlanması tahmin edilen puan:**
+
+- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
+
+- **Sprint board update:** Sprint board screenshotları:
+
+![trello1](sprint2/board1.PNG)
+
+![trello2](sprint2/board2.PNG)
+
+![trello2](sprint2/board3.PNG)
+
+- **Ürün durumu:** Ekran Görüntüleri:
+
+![game1](sprint2/game1.png)
+
+![game2](sprint2/game2.PNG)
+
+**Sprint review:**
+
+**Sprint retrospective:**
+
 # Sprint 3
 
