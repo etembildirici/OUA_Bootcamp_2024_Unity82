@@ -990,7 +990,7 @@ MonoBehaviour:
   - {fileID: 3717067902342885291, guid: 1713477acc2891940b7753f5697d697a, type: 3}
   minGridSpacing: 10
   maxGridSpacing: 20
-  riverLength: 40
+  riverLength: 60
   gridLayerMask:
     serializedVersion: 2
     m_Bits: 0

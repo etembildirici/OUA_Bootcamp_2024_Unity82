@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5ad78918915f74d93e88272145515e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  resetPositionX: -10
-  startPositionX: 10
+  speed: 1.5
+  resetPositionX: -20
+  startPositionX: 20
 --- !u!1 &8457258512190235913
 GameObject:
   m_ObjectHideFlags: 0
