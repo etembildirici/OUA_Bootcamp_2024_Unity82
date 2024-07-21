@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 6555941798054988795}
   - component: {fileID: 7363574009088538794}
   - component: {fileID: 2372648356896828201}
+  - component: {fileID: 7743151320064836441}
   m_Layer: 0
   m_Name: Pole01D
   m_TagString: Obstacle
@@ -189,6 +190,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7743151320064836441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592806857514468685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8, y: 5, z: 1.8}
+  m_Center: {x: 0.100000024, y: 2.5, z: 0}
 --- !u!1 &8227902559409614476
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +278,7 @@ GameObject:
   - component: {fileID: 4243873168309425919}
   - component: {fileID: 2654820015555787498}
   - component: {fileID: 1267889699846806740}
+  - component: {fileID: 7137358089409042382}
   m_Layer: 0
   m_Name: Pole01D
   m_TagString: Obstacle
@@ -328,3 +351,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7137358089409042382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804624519222966429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.687954, y: 5, z: 1.8}
+  m_Center: {x: -0.15602306, y: 2.5, z: 2.1998056e-14}
