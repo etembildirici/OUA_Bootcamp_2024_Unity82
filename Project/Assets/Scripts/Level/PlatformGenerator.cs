@@ -76,6 +76,20 @@ public class PlatformGenerator : MonoBehaviour
             }
         }
 
+        if (lastSpawnedTile != null)
+        {
+            if (lastSpawnedTile.CompareTag("River") && newTile.CompareTag("River"))
+            {
+                Destroy(newTile);
+                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
+            }
+            else if (lastSpawnedTile.CompareTag("River2") && newTile.CompareTag("River2"))
+            {
+                Destroy(newTile);
+                newTile = Instantiate(prefabs[4], nextSpawnPosition, Quaternion.identity, level.transform);
+            }
+        }
+
         activeTiles.Enqueue(newTile);
         nextSpawnPosition += GetPrefabSize(newTile);
         lastSpawnedTile = newTile;

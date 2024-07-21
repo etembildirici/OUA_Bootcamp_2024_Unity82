@@ -927,8 +927,8 @@ GameObject:
   - component: {fileID: 8708488327677679439}
   - component: {fileID: 651449917960911847}
   m_Layer: 0
-  m_Name: River
-  m_TagString: River
+  m_Name: River2
+  m_TagString: River2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
   gridLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  direction: 1
+  direction: -1
 --- !u!1 &4796601833502555483
 GameObject:
   m_ObjectHideFlags: 0
