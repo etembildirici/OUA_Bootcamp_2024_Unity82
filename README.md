@@ -123,7 +123,7 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 - Ödüllendirme için sandık yerine sadece coin eklenmesine karar verildi.
 
-- - Sprint Review katılımcıları: Etem Zemci Bildirici, Fatime Emin, Esra Uğurbaş
+- Sprint Review katılımcıları: Etem Zemci Bildirici, Fatime Emin, Esra Uğurbaş
 
 **Sprint retrospective:**
 
