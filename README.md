@@ -87,9 +87,9 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 # Sprint 2
 
-- **Sprint içinde tamamlanması tahmin edilen puan:**
+- **Sprint içinde tamamlanması tahmin edilen puan:** 20
 
-- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır.
+- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır. [Daily Scrum]https://docs.google.com/document/d/1nPFootryK-KwlysL2jIznQ0j0XYLb53JrmNrgWhFyYE/edit
 
 - **Sprint board update:** Sprint board screenshotları:
 
@@ -106,6 +106,22 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 ![game2](sprint2/game2.PNG)
 
 **Sprint review:**
+
+- Oyuna yeni engeller eklendi.
+
+- Çevre tasarımı düzenlendi ve çevre sınırlandırıldı.
+
+- Arayüz düzenlendi.
+
+- Karakter modeli eklendi.
+
+- Kaybetme ve oyuna yeniden başlama özelliği tamamlandı.
+
+- Karakter animasyonları ve oyuncu bilgilerini kaydetme 3. Sprinte ertelendi.
+
+- Sprint puanlamada değişiklik yapılmadı.
+
+- Ödüllendirme için sandık yerine sadece coin eklenmesine karar verildi.
 
 **Sprint retrospective:**
 
