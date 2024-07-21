@@ -11,7 +11,7 @@ Unity 82
 | Fahreddin Ekiz | Developer |
 | Esra Uğurbaş | Developer |
 
-# Oyun İle İlgili Bilgiler
+# Oyun Bilgileri
 
 ## Oyun İsmi
 Dungeon Run
