@@ -126,7 +126,7 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 **Sprint retrospective:**
 
-- 2 günde bir online görüşme yapılmasına karar verildi.
+- Her gün için online görüşme yapılmasına karar verildi.
 
 # Sprint 3
 
