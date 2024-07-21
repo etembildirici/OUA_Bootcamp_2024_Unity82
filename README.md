@@ -10,7 +10,6 @@ Unity 82
 | Etem Zemci Bildirici | Product Owner |
 | Fahreddin Ekiz | Developer |
 | Esra Uğurbaş | Developer |
-| Eyüp Can Balaban | Developer |
 
 # Oyun İle İlgili Bilgiler
 
@@ -89,7 +88,7 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 - **Sprint içinde tamamlanması tahmin edilen puan:** 20
 
-- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır. [Daily Scrum]https://docs.google.com/document/d/1nPFootryK-KwlysL2jIznQ0j0XYLb53JrmNrgWhFyYE/edit
+- **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır. [Daily Scrum](https://docs.google.com/document/d/1nPFootryK-KwlysL2jIznQ0j0XYLb53JrmNrgWhFyYE/edit)
 
 - **Sprint board update:** Sprint board screenshotları:
 
