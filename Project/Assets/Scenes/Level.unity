@@ -2039,7 +2039,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
     - target: {fileID: 9205790994273934752, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: m_fontColor32.rgba

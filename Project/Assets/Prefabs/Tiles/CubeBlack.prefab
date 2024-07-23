@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23655331641472948}
   - component: {fileID: 3327160773396183167}
   - component: {fileID: 170066593316225440}
+  - component: {fileID: 4664500401910021182}
   m_Layer: 0
   m_Name: CubeBlack
   m_TagString: Tile
@@ -128,3 +129,22 @@ MonoBehaviour:
   validTags:
   - FloorGreyBlack01
   - FloorGreyBlack02
+--- !u!114 &4664500401910021182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886358935065936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4399f5b0d09b7477d98ba3743e1c2d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gems:
+  - {fileID: 8012793041959376417, guid: 263babfe938394002a6b18abdbda0091, type: 3}
+  gemProbability: 0.2
+  predefinedPosition: {x: 0, y: 2, z: 0}
+  validTags:
+  - FloorBlack
+  - FloorGrey

@@ -188,9 +188,9 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    /*public void GameOver()
     {
         pauseResumeButton.gameObject.SetActive(false); // Oyun bittiğinde butonu gizle
-    }
+    }*/
 }
 

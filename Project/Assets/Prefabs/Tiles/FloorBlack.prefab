@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 7291516731181522818}
   m_Layer: 0
   m_Name: FloorBlack
-  m_TagString: Untagged
+  m_TagString: FloorBlack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

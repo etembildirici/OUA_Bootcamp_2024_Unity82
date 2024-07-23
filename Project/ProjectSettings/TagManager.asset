@@ -15,6 +15,10 @@ TagManager:
   - Obstacle
   - Trap
   - River
+  - River2
+  - FloorGrey
+  - FloorBlack
+  - Gem
   layers:
   - Default
   - TransparentFX
