@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# Unity82Project
-OUA Bootcamp 2024 --
-=======
+# Oyun ve Uygulama Akademisi Bootcamp 2024
+
 # Takım İsmi
 
 Unity 82
@@ -133,5 +131,4 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 - Her gün için online görüşme yapılmasına karar verildi.
 
 # Sprint 3
->>>>>>> 61d79d2931aaf0ed48243ecfc07d903473f9ce87
 
