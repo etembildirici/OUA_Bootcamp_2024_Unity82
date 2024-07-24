@@ -2053,7 +2053,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 917483755756912193, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 288972118}
   m_SourcePrefab: {fileID: 100100000, guid: 5258318422bf04870a889f0e7872a403, type: 3}
 --- !u!1 &76993659
 GameObject:
@@ -5198,6 +5202,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 287357445}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &288972112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 917483755756912193, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &288972118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288972112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f02b3f113ad4418a8ed04cd8bcaa3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemCountText: {fileID: 801117023}
 --- !u!1 &290759583
 GameObject:
   m_ObjectHideFlags: 0
@@ -12225,6 +12248,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8000009, y: 5.71851, z: 1.8000004}
   m_Center: {x: -0.019131243, y: 2.9050286, z: 0.02490899}
+--- !u!114 &801117023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5785555380667821320, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &812301458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39238,6 +39273,7 @@ GameObject:
   - component: {fileID: 8034720941984970941}
   - component: {fileID: 8034720941984970942}
   - component: {fileID: 8034720941984970943}
+  - component: {fileID: 8034720941984970944}
   m_Layer: 6
   m_Name: Player
   m_TagString: Grid
@@ -39506,6 +39542,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8034720941984970944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022323956866147430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cec8fcd4f63b475586583e9ee21f57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemUIManager: {fileID: 288972118}
 --- !u!1 &8049685036558411943
 GameObject:
   m_ObjectHideFlags: 0
