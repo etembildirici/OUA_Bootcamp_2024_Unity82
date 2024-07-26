@@ -39279,6 +39279,7 @@ GameObject:
   - component: {fileID: 8034720941984970942}
   - component: {fileID: 8034720941984970943}
   - component: {fileID: 8034720941984970944}
+  - component: {fileID: 8034720941984970945}
   m_Layer: 6
   m_Name: Player
   m_TagString: Grid
@@ -39491,7 +39492,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022323956866147430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0098d11233a4a9245a8539bdcf17a880, type: 3}
   m_Name: 
@@ -39560,6 +39561,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemUIManager: {fileID: 288972118}
+--- !u!114 &8034720941984970945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022323956866147430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e2dbd7cd8bf584b865c1809109e9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8049685036558411943
 GameObject:
   m_ObjectHideFlags: 0
