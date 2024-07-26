@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement3 : MonoBehaviour
 {
@@ -9,11 +8,26 @@ public class PlayerMovement3 : MonoBehaviour
 
     private void Start()
     {
-        characterAnim = GetComponent<Animator>();
+        // Assume the child GameObject with the Animator component is named "Character"
+        Transform characterTransform = transform.Find("RogueHooded");
+        if (characterTransform != null)
+        {
+            characterAnim = characterTransform.GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.LogError("Character GameObject not found. Make sure it is a child of the Player GameObject.");
+        }
     }
 
     private void Update()
     {
+        if (characterAnim == null)
+        {
+            Debug.LogError("Animator component not found on the Character GameObject.");
+            return;
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -43,12 +57,11 @@ public class PlayerMovement3 : MonoBehaviour
         {
             characterAnim.SetFloat("hiz", 0.0f);
         }
-     
     }
 
     private void moveCharacter(Vector3 direction)
     {
         transform.position += direction * 2f;
     }
-
 }
+
