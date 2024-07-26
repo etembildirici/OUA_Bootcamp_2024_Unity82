@@ -1781,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 6279241945062380020, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: m_text
-      value: 'Max: 0
+      value: '
 
 '
       objectReference: {fileID: 0}
@@ -1994,6 +1994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205790994273934752, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9205790994273934752, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}

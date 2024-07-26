@@ -19,6 +19,7 @@ TagManager:
   - FloorGrey
   - FloorBlack
   - Gem
+  - RiverWithGrate
   layers:
   - Default
   - TransparentFX

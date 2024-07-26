@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 511357106336546258}
   m_Layer: 0
   m_Name: RiverWithGrate
-  m_TagString: Untagged
+  m_TagString: RiverWithGrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1527,6 +1527,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1589,6 +1594,11 @@ PrefabInstance:
     - target: {fileID: 4486018891411640, guid: 454be4bc29935d0448678931d2afc98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1796,6 +1806,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1984,6 +1999,11 @@ PrefabInstance:
     - target: {fileID: 4486018891411640, guid: 454be4bc29935d0448678931d2afc98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2620,6 +2640,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3049,6 +3074,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3255,6 +3285,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3318,6 +3353,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3380,6 +3420,11 @@ PrefabInstance:
     - target: {fileID: 4486018891411640, guid: 454be4bc29935d0448678931d2afc98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3649,6 +3694,11 @@ PrefabInstance:
     - target: {fileID: 4486018891411640, guid: 454be4bc29935d0448678931d2afc98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367608768860569104, guid: 454be4bc29935d0448678931d2afc98f,
+        type: 3}
+      propertyPath: gemProbability
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
