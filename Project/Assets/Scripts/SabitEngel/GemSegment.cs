@@ -8,7 +8,7 @@ public class GemSegment : MonoBehaviour
     public GameObject[] gems; // Elmas prefab'ları
     public float gemProbability = 0.1f; // Elmas yerleştirme olasılığı (%20)
     public Vector3 predefinedPosition; // Önceden tanımlanmış pozisyon
-    public string[] validTags = { "FloorBlack", "FloorGrey" }; // Geçerli etiketler
+    public string[] validTags = { "FloorBlack", "FloorGrey", "RiverWithGrate" }; // Geçerli etiketler
 
     private void Start()
     {

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3717067902342885291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad5ad78918915f74d93e88272145515e, type: 3}
   m_Name: 
@@ -156,6 +156,7 @@ MonoBehaviour:
   speed: 1.5
   resetPositionX: -20
   startPositionX: 20
+  direction: 1
 --- !u!1 &5643443516174821372
 GameObject:
   m_ObjectHideFlags: 0
