@@ -4,6 +4,12 @@ using System.Collections.Generic;
 
 public class RiverManager : MonoBehaviour
 {
+    public enum RiverDirection
+    {
+        LeftToRight,
+        RightToLeft
+    }
+
     public GameObject[] gridPrefabs;
     public float minSpawnInterval = 1.5f;
     public float maxSpawnInterval = 3.5f;
@@ -11,19 +17,34 @@ public class RiverManager : MonoBehaviour
     public float maxMoveSpeed = 3.5f;
     public int gridCount = 5;
     public float riverWidth = 40f;
+    public RiverDirection riverDirection = RiverDirection.LeftToRight;
 
     private float spawnPositionX;
     private float fixedY;
     private float fixedZ;
     private float currentMoveSpeed;
+    private Vector3 moveDirection;
 
     void Start()
     {
-        spawnPositionX = -riverWidth / 2 - 6f;
+        SetSpawnPosition();
         fixedY = transform.position.y;
         fixedZ = transform.position.z;
         SetNewRiverSpeed();
+        SetMoveDirection();
         StartCoroutine(SpawnGrids());
+    }
+
+    void SetSpawnPosition()
+    {
+        spawnPositionX = riverDirection == RiverDirection.LeftToRight ?
+            -riverWidth / 2 - 6f : riverWidth / 2 + 6f;
+    }
+
+    void SetMoveDirection()
+    {
+        moveDirection = riverDirection == RiverDirection.LeftToRight ?
+            Vector3.right : Vector3.left;
     }
 
     void SetNewRiverSpeed()
@@ -66,7 +87,7 @@ public class RiverManager : MonoBehaviour
 
             foreach (GameObject grid in gridSet)
             {
-                grid.transform.Translate(Vector3.right * currentMoveSpeed * Time.deltaTime);
+                grid.transform.Translate(moveDirection * currentMoveSpeed * Time.deltaTime);
             }
 
             yield return null;

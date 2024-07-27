@@ -989,11 +989,12 @@ MonoBehaviour:
   - {fileID: 2189132339697593569, guid: 017f544ab67ca124cb93438d263ba29a, type: 3}
   - {fileID: 3717067902342885291, guid: 1713477acc2891940b7753f5697d697a, type: 3}
   minSpawnInterval: 4
-  maxSpawnInterval: 6
+  maxSpawnInterval: 7
   minMoveSpeed: 1.5
-  maxMoveSpeed: 3.5
+  maxMoveSpeed: 3
   gridCount: 5
   riverWidth: 44
+  riverDirection: 0
 --- !u!1 &4796601833502555483
 GameObject:
   m_ObjectHideFlags: 0
