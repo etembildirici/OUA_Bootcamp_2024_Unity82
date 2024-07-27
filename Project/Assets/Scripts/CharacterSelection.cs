@@ -1,32 +1,47 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject[] characters;
-    public int selectedCharacter = 0;
+    public Image characterImage;
+    public Sprite[] characterSprites;
+    private int currentIndex = 0;
+
+    void Start()
+    {
+        UpdateCharacterImage();
+    }
 
     public void NextCharacter()
     {
-        characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (selectedCharacter + 1) % characters.Length;
-        characters[selectedCharacter].SetActive(true);  
+        currentIndex++;
+        if (currentIndex >= characterSprites.Length)
+        {
+            currentIndex = 0;
+        }
+        UpdateCharacterImage();
     }
 
     public void PreviousCharacter()
     {
-        characters[selectedCharacter - 1].SetActive(false);
-        if (selectedCharacter<0)
-            selectedCharacter +=characters.Length;
-        characters[selectedCharacter].SetActive(true);
+        currentIndex--;
+        if (currentIndex < 0)
+        {
+            currentIndex = characterSprites.Length - 1;
+        }
+        UpdateCharacterImage();
     }
 
-    public void StartGame()
-    {  
-        PlayerPrefs.SetInt("selectedCharacter",selectedCharacter );
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+    void UpdateCharacterImage()
+    {
+        characterImage.sprite = characterSprites[currentIndex];
+    }
 
-    
+    public void OnStartGame()
+    {
+        GameManager.Instance.SelectCharacter(characterSprites[currentIndex].name);
+        SceneManager.LoadScene("GameScene");
     }
 }
