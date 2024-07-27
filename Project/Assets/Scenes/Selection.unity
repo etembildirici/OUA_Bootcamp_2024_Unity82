@@ -203,19 +203,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 213535798}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 190c1f33b4a2a0f4ba7c34acf5731c86, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &213535798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 2535591157756292701, guid: 3d1045b1fa00f28419f069f6fe7cf919,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.44877
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2535591157756292701, guid: 3d1045b1fa00f28419f069f6fe7cf919,
         type: 3}
@@ -1430,19 +1418,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083669753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 642a412291e11d449b15afec354c22e8, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2083669753
 MonoBehaviour:
   m_ObjectHideFlags: 0
