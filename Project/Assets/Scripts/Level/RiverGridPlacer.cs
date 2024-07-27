@@ -15,13 +15,20 @@ public class RiverManager : MonoBehaviour
     private float spawnPositionX;
     private float fixedY;
     private float fixedZ;
+    private float currentMoveSpeed;
 
     void Start()
     {
         spawnPositionX = -riverWidth / 2 - 6f;
         fixedY = transform.position.y;
         fixedZ = transform.position.z;
+        SetNewRiverSpeed();
         StartCoroutine(SpawnGrids());
+    }
+
+    void SetNewRiverSpeed()
+    {
+        currentMoveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
     }
 
     IEnumerator SpawnGrids()
@@ -37,7 +44,6 @@ public class RiverManager : MonoBehaviour
     void SpawnGridSet()
     {
         List<GameObject> gridSet = new List<GameObject>();
-        float moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
 
         for (int i = 0; i < gridCount; i++)
         {
@@ -47,20 +53,20 @@ public class RiverManager : MonoBehaviour
             gridSet.Add(grid);
         }
 
-        StartCoroutine(MoveGridSet(gridSet, moveSpeed));
+        StartCoroutine(MoveGridSet(gridSet));
     }
 
-    IEnumerator MoveGridSet(List<GameObject> gridSet, float moveSpeed)
+    IEnumerator MoveGridSet(List<GameObject> gridSet)
     {
         float elapsedDistance = 0f;
 
         while (elapsedDistance < riverWidth + 6f)
         {
-            elapsedDistance += moveSpeed * Time.deltaTime;
+            elapsedDistance += currentMoveSpeed * Time.deltaTime;
 
             foreach (GameObject grid in gridSet)
             {
-                grid.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                grid.transform.Translate(Vector3.right * currentMoveSpeed * Time.deltaTime);
             }
 
             yield return null;
