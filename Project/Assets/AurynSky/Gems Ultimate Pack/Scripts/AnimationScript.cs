@@ -27,8 +27,8 @@ public class AnimationScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+        transform.rotation = Quaternion.Euler(-90f, 0f, 0f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
