@@ -41,7 +41,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void OnStartGame()
     {
-        GameManager.Instance.SelectCharacter(characterSprites[currentIndex].name);
+        GameManager2.Instance.SelectCharacter(characterSprites[currentIndex].name);
         SceneManager.LoadScene("GameScene");
     }
 }
