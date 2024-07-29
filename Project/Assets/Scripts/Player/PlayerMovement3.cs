@@ -4,30 +4,44 @@ using UnityEngine;
 
 public class PlayerMovement3 : MonoBehaviour
 {
-    Animator characterAnim;
+    // Animator referanslarý
+    private Animator rogueHoodedAnim;
+    private Animator mageAnim;
+    private Animator barbarianAnim;
+    private Animator knightAnim;
+
+    // Aktif karakteri belirlemek için bir deðiþken
+    private int activeCharacterIndex;
 
     private void Start()
     {
-        // Assume the child GameObject with the Animator component is named "RogueHooded"
-        Transform characterTransform = transform.Find("RogueHooded");
-        if (characterTransform != null)
+        // Karakterlerin Animator komponentlerini bul
+        rogueHoodedAnim = transform.Find("RogueHooded")?.GetComponent<Animator>();
+        mageAnim = transform.Find("Mage")?.GetComponent<Animator>();
+        barbarianAnim = transform.Find("Barbarian")?.GetComponent<Animator>();
+        knightAnim = transform.Find("Knight")?.GetComponent<Animator>();
+
+        // Eðer bir karakter bulunamazsa hata mesajý ver
+        if (rogueHoodedAnim == null || mageAnim == null || barbarianAnim == null || knightAnim == null)
         {
-            characterAnim = characterTransform.GetComponent<Animator>();
+            Debug.LogError("Bir veya daha fazla karakter GameObject'i bulunamadý. Lütfen tüm karakterlerin adlarýný kontrol edin.");
         }
-        else
-        {
-            Debug.LogError("Character GameObject not found. Make sure it is a child of the Player GameObject.");
-        }
+
+        // Seçilen karakterin index deðerini almak için PlayerPrefs kullan
+        activeCharacterIndex = PlayerPrefs.GetInt("CharacterSelected", 0);
     }
 
     private void Update()
     {
+        // Aktif karakterin Animator'ýný seç
+        Animator characterAnim = GetActiveCharacterAnimator();
         if (characterAnim == null)
         {
-            Debug.LogError("Animator component not found on the Character GameObject.");
+            Debug.LogError("Aktif karakterin Animator'ý bulunamadý.");
             return;
         }
 
+        // Karakter hareketi ve animasyon güncellemesi
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -57,14 +71,34 @@ public class PlayerMovement3 : MonoBehaviour
         }
     }
 
+    private Animator GetActiveCharacterAnimator()
+    {
+        // Aktif karakter index'ine göre doðru Animator'ý döndür
+        switch (activeCharacterIndex)
+        {
+            case 0: // RogueHooded
+                return rogueHoodedAnim;
+            case 1: // Mage
+                return mageAnim;
+            case 2: // Barbarian
+                return barbarianAnim;
+            case 3: // Knight
+                return knightAnim;
+            default:
+                return null;
+        }
+    }
+
     private void moveCharacter(Vector3 direction, Quaternion rotation)
     {
-        // Move the character
+        // Karakteri hareket ettir
         transform.position += direction * 2f;
 
-        // Rotate the character
+        // Karakteri döndür
         transform.rotation = rotation;
     }
 }
+
+
 
 
