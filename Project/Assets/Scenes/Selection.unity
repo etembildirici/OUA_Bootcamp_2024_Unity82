@@ -203,7 +203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 213535798}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 352297998}
+        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &213535798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +296,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 364230065}
   - {fileID: 2068198294}
+  - {fileID: 364230065}
   - {fileID: 662040862}
   - {fileID: 739371294}
   m_Father: {fileID: 0}
@@ -1084,10 +1096,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7933122972773080146, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7933122972773080146, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7263015266732235272, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7263015266732235272, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -3053669679340262298, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -3053669679340262298, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -935533772807217311, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -935533772807217311, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
         type: 3}
       propertyPath: m_Name
       value: RogueHooded (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680723932289504619, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680723932289504619, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780057163218742532, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780057163218742532, guid: 99f8bc3cc546b054eaa7dbd5b5c7bced,
+        type: 3}
+      propertyPath: m_Bones.Array.data[13]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

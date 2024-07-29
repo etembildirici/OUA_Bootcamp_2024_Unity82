@@ -12,6 +12,8 @@ public class CharacterSelection : MonoBehaviour
 
     void Start()
     {
+        index = PlayerPrefs.GetInt("CharacterSelected");
+
        characterList = new GameObject[transform.childCount];    
 
         for(int i = 0; i < characterList.Length; i++)        
@@ -20,8 +22,8 @@ public class CharacterSelection : MonoBehaviour
         foreach(GameObject go in characterList) 
             go.SetActive(false);
 
-        if (characterList[0])
-            characterList[0].SetActive(true);
+        if (characterList[index])
+            characterList[index].SetActive(true);
     }
     public void ToggleLeft()
     {
@@ -44,6 +46,12 @@ public class CharacterSelection : MonoBehaviour
 
         characterList[index].SetActive(true);
 
+    }
+
+    public void PlayButton()
+    {
+        PlayerPrefs.SetInt("CharacterSelected", index);
+        SceneManager.LoadScene("Level");
     }
 
 }
