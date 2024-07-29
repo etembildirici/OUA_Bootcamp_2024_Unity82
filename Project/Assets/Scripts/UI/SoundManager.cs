@@ -18,10 +18,12 @@ public class SoundManager : MonoBehaviour
         isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
         UpdateSoundIcon();
         soundToggleButton.onClick.AddListener(ToggleSound);
-    }
 
+    }
+    
     public void ToggleSound()
     {
+        
         isSoundOn = !isSoundOn;
         PlayerPrefs.SetInt("SoundOn", isSoundOn ? 1 : 0);
         PlayerPrefs.Save();
@@ -51,4 +53,5 @@ public class SoundManager : MonoBehaviour
             soundIcon.sprite = soundOffIcon;
         }
     }
+   
 }
