@@ -1,29 +1,24 @@
+using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 //using UnityEngine.SceneManagement;
 
 public class PlayerSpikeDetection : MonoBehaviour
 {
+    public Transform[] characterList;
     private bool isHitBySpike = false;
     private Animator characterAnim;
+    private PlayerTouchMovement playerTouchMovementScript;
 
     void Start()
     {
-        // Player GameObject'inin içindeki "RogueHooded" adlý alt GameObject'teki Animator bileþenini bul
-        Transform characterTransform = transform.Find("RogueHooded");
-        if (characterTransform != null)
-        {
-            characterAnim = characterTransform.GetComponent<Animator>();
-            if (characterAnim == null)
-            {
-                Debug.LogError("Animator bileþeni 'RogueHooded' alt GameObject'inde bulunamadý.");
-            }
-        }
-        else
-        {
-            Debug.LogError("RogueHooded adlý alt GameObject bulunamadý. Lütfen doðru isimlendirildiðinden emin olun.");
-        }
+        playerTouchMovementScript = GetComponent<PlayerTouchMovement>();
+        CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
+        int index = characterSelectionScript.index;
+        characterAnim = characterList[index].GetComponent<Animator>();
+
     }
 
     void OnTriggerEnter(Collider other)
