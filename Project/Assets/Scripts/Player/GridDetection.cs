@@ -15,6 +15,7 @@ public class GridDetection : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.down);
         RaycastHit[] hits = Physics.RaycastAll(ray, 1f);
 
+
         foreach (var hit in hits)
         {
             if (hit.collider.CompareTag("Grid"))
