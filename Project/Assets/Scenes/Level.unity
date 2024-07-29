@@ -9129,6 +9129,12 @@ Transform:
   - {fileID: 1557440044}
   m_Father: {fileID: 1943276314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &510314532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8199979050935458251, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &541518468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24994,6 +25000,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1518387476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1531929365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180563759141338895, guid: 5258318422bf04870a889f0e7872a403,
+    type: 3}
+  m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1535874912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32010,6 +32022,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
         type: 3}
+      propertyPath: musicButton
+      value: 
+      objectReference: {fileID: 1531929365}
+    - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
+        type: 3}
       propertyPath: maxScoreText
       value: 
       objectReference: {fileID: 755026570}
@@ -32018,6 +32035,11 @@ PrefabInstance:
       propertyPath: restartButton
       value: 
       objectReference: {fileID: 557324974}
+    - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
+        type: 3}
+      propertyPath: characterButton
+      value: 
+      objectReference: {fileID: 510314532}
     - target: {fileID: 1843817592913059733, guid: eff4784b256bc4bb39dc28a0fd09f574,
         type: 3}
       propertyPath: pauseResumeButton
@@ -39485,7 +39507,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8914141804670245165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -40098,6 +40120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1864403202}
+  targetCamera: {fileID: 384495783}
 --- !u!114 &8034720941984970942
 MonoBehaviour:
   m_ObjectHideFlags: 0
