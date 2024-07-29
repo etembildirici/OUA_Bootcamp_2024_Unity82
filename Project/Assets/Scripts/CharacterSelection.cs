@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject[] characterList; // Array to be set in the Inspector or via code
+    private GameObject[] characterList;
     public int index;
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
@@ -12,7 +12,7 @@ public class CharacterSelection : MonoBehaviour
 
     void Start()
     {
-        index = PlayerPrefs.GetInt("CharacterSelected", 0); // Default to 0 if no value is found
+        index = PlayerPrefs.GetInt("CharacterSelected");
         characterList = new GameObject[transform.childCount];
         for (int i = 0; i < characterList.Length; i++)
             characterList[i] = transform.GetChild(i).gameObject;
@@ -20,11 +20,6 @@ public class CharacterSelection : MonoBehaviour
             go.SetActive(false);
         if (characterList[index])
             characterList[index].SetActive(true);
-    }
-
-    public GameObject[] GetCharacterList()
-    {
-        return characterList;
     }
 
     void Update()

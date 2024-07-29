@@ -78,12 +78,12 @@ public class PlayerMovement3 : MonoBehaviour
         {
             case 0: // RogueHooded
                 return rogueHoodedAnim;
-            case 1: // Mage
-                return mageAnim;
-            case 2: // Barbarian
+            case 1: // Barbarian
                 return barbarianAnim;
-            case 3: // Knight
+            case 2: // Knight
                 return knightAnim;
+            case 3: // Mage
+                return mageAnim;
             default:
                 return null;
         }
