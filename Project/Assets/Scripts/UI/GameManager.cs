@@ -9,15 +9,22 @@ public class GameManager : MonoBehaviour
     public GameObject pauseResumeButton;
     public TextMeshProUGUI maxScoreText;
     public GameObject characterButton;
-    public GameObject musicButton;
+    public GameObject soundButton;
+
+    //public string characterSelectionSceneName = "Selection"; // Karakter değiştirme sahnesinin adı
+
+    public void GoToCharacterSelection()
+    {
+        SceneManager.LoadScene("Selection");
+    }
+
 
     private void Start()
     {
         restartButton.SetActive(false); // Oyun başlarken butonu gizle
         maxScoreText.gameObject.SetActive(false);
-        characterButton.gameObject.SetActive(false);
-        musicButton.gameObject.SetActive(false);
-
+        characterButton.SetActive(false);
+        soundButton.SetActive(false);
     }
 
     public void EndGame()
@@ -26,8 +33,9 @@ public class GameManager : MonoBehaviour
         restartButton.SetActive(true); // Yeniden başlama butonunu göster
         pauseResumeButton.gameObject.SetActive(false);
         maxScoreText.gameObject.SetActive(true);
-        characterButton.gameObject.SetActive(true);
-        musicButton.gameObject.SetActive(true);
+        characterButton.SetActive(true);
+        soundButton.SetActive(true);
+
     }
 
     public void RestartGame()

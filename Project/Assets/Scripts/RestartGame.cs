@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    public GameManager gameManager; // GameManager referansý
+    public GameManager gameManager; // GameManager referans?
     public bool isPlayerAlive = true;
 
     void OnTriggerEnter(Collider other)
@@ -14,7 +14,7 @@ public class RestartGame : MonoBehaviour
         {
             isPlayerAlive = false;
             Debug.Log("Player collided with obstacle!");
-            gameManager.EndGame(); // Oyunu durdur ve yeniden baþlama butonunu göster
+            gameManager.EndGame(); // Oyunu durdur ve yeniden ba?lama butonunu g?ster
         }
     }
 }
