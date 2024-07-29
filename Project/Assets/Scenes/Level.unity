@@ -40328,7 +40328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf3376786d483744b48e0d58a5f0652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterList: []
+  characterList:
+  - {fileID: 1146735301}
+  - {fileID: 1535874913}
+  - {fileID: 2107602053}
+  - {fileID: 2129988845}
 --- !u!4 &5738108483323801636
 Transform:
   m_ObjectHideFlags: 0
@@ -40657,7 +40661,6 @@ GameObject:
   - component: {fileID: 5284432541501456586}
   - component: {fileID: 8034720941984970941}
   - component: {fileID: 8034720941984970942}
-  - component: {fileID: 8034720941984970943}
   - component: {fileID: 8034720941984970944}
   m_Layer: 7
   m_Name: Player
@@ -40878,7 +40881,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAnim: {fileID: 0}
   character: {fileID: 0}
-  characterList: []
+  characterList:
+  - {fileID: 1146735301}
+  - {fileID: 1535874913}
+  - {fileID: 2107602053}
+  - {fileID: 2129988845}
   moveDistance: 2
   swipeThreshold: 50
   obstacleLayer:
@@ -40910,27 +40917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb7892a98e11ed4b8314659efcb5695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &8034720941984970943
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7022323956866147430}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c627f88651c4fc0468805833296db4b4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8034720941984970944
 MonoBehaviour:
   m_ObjectHideFlags: 0
