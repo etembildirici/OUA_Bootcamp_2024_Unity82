@@ -5,43 +5,45 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public Image characterImage;
-    public Sprite[] characterSprites;
-    private int currentIndex = 0;
+    private GameObject[] characterList;
+    private int index;
+
+
 
     void Start()
     {
-        UpdateCharacterImage();
+       characterList = new GameObject[transform.childCount];    
+
+        for(int i = 0; i < characterList.Length; i++)        
+            characterList[i]= transform.GetChild(i).gameObject;
+        
+        foreach(GameObject go in characterList) 
+            go.SetActive(false);
+
+        if (characterList[0])
+            characterList[0].SetActive(true);
+    }
+    public void ToggleLeft()
+    {
+        characterList[index].SetActive(false);
+
+        index--;
+        if (index < 0)
+            index = characterList.Length - 1;
+
+        characterList[index].SetActive(true);
+
+    }
+    public void ToggleRight()
+    {
+        characterList[index].SetActive(false);
+
+        index++;
+        if (index == characterList.Length)
+            index = 0;
+
+        characterList[index].SetActive(true);
+
     }
 
-    public void NextCharacter()
-    {
-        currentIndex++;
-        if (currentIndex >= characterSprites.Length)
-        {
-            currentIndex = 0;
-        }
-        UpdateCharacterImage();
-    }
-
-    public void PreviousCharacter()
-    {
-        currentIndex--;
-        if (currentIndex < 0)
-        {
-            currentIndex = characterSprites.Length - 1;
-        }
-        UpdateCharacterImage();
-    }
-
-    void UpdateCharacterImage()
-    {
-        characterImage.sprite = characterSprites[currentIndex];
-    }
-
-    public void OnStartGame()
-    {
-        GameManager2.Instance.SelectCharacter(characterSprites[currentIndex].name);
-        SceneManager.LoadScene("GameScene");
-    }
 }
