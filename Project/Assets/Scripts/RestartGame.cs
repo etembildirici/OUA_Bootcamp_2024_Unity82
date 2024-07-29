@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
     public GameManager gameManager; // GameManager referansý
-    private bool isPlayerAlive = true;
+    public bool isPlayerAlive = true;
 
     void OnTriggerEnter(Collider other)
     {
