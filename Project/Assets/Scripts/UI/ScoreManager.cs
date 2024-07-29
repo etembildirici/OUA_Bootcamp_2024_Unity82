@@ -147,7 +147,7 @@ public class ScoreManager : MonoBehaviour
     private void UpdateUI()
     {
         scoreText.text = " " + score;
-        maxScoreText.text = "Max " + maxScore;
+        maxScoreText.text = "Top " + maxScore;
     }
 
     public void TogglePauseResume()
