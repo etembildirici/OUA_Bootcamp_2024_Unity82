@@ -6,21 +6,21 @@ using UnityEngine;
 public class PlayerTouchMovement : MonoBehaviour
 {
     Animator characterAnim;
-    public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
+    public float moveDistance = 2f; // Karakterin bir ad?m at?? mesafesi
     private Vector2 startTouchPosition, endTouchPosition;
-    public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
-    private bool isSwiping = false; // Kaydýrma hareketini takip etmek için bayrak
-    public LayerMask obstacleLayer; // Engellerin bulunduðu katman
+    public float swipeThreshold = 50f; // Minimum kayd?rma mesafesi
+    private bool isSwiping = false; // Kayd?rma hareketini takip etmek i?in bayrak
+    public LayerMask obstacleLayer; // Engellerin bulundu?u katman
 
-    private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
+    private float maxZPosition; // Karakterin ula?t??? en y?ksek z pozisyonu
 
-    // Karakter hareket ettiðinde çaðrýlacak olay
+    // Karakter hareket etti?inde ?a?r?lacak olay
     public static event Action OnMoveForward;
 
     void Start()
     {
         characterAnim = GetComponent<Animator>();
-        maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
+        maxZPosition = transform.position.z; // Ba?lang?? z pozisyonu
     }
 
     void Update()
@@ -44,11 +44,11 @@ public class PlayerTouchMovement : MonoBehaviour
                 endTouchPosition = touch.position;
                 Vector2 swipeDirection = endTouchPosition - startTouchPosition;
 
-                if (isSwiping && swipeDirection.magnitude > swipeThreshold) // Minimum kaydýrma mesafesi
+                if (isSwiping && swipeDirection.magnitude > swipeThreshold) // Minimum kayd?rma mesafesi
                 {
                     if (Mathf.Abs(swipeDirection.x) > Mathf.Abs(swipeDirection.y))
                     {
-                        // Yatay kaydýrma
+                        // Yatay kayd?rma
                         if (swipeDirection.x > 0)
                         {
                             TryMove(Vector3.right);
@@ -60,7 +60,7 @@ public class PlayerTouchMovement : MonoBehaviour
                     }
                     else
                     {
-                        // Dikey kaydýrma
+                        // Dikey kayd?rma
                         if (swipeDirection.y > 0)
                         {
                             TryMove(Vector3.forward);
@@ -73,7 +73,7 @@ public class PlayerTouchMovement : MonoBehaviour
                 }
                 else if (!isSwiping)
                 {
-                    // Sadece ekrana týklama durumunda ileri gitme
+                    // Sadece ekrana t?klama durumunda ileri gitme
                     TryMove(Vector3.forward);
                 }
             }
@@ -85,10 +85,10 @@ public class PlayerTouchMovement : MonoBehaviour
         // Hedef pozisyonu belirleme
         Vector3 targetPosition = transform.position + direction * moveDistance;
 
-        // Hedef pozisyonda bir engel olup olmadýðýný kontrol et
+        // Hedef pozisyonda bir engel olup olmad???n? kontrol et
         if (!IsObstacleInDirection(direction))
         {
-            // Eðer engel yoksa karakteri hedef pozisyona hareket ettir
+            // E?er engel yoksa karakteri hedef pozisyona hareket ettir
             moveCharacter(direction);
         }
     }
@@ -98,7 +98,7 @@ public class PlayerTouchMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, direction, out hit, moveDistance, obstacleLayer))
         {
-            Debug.Log("Engel algýlandý: " + hit.collider.name);
+            Debug.Log("Engel alg?land?: " + hit.collider.name);
             return true;
         }
         return false;
@@ -108,7 +108,7 @@ public class PlayerTouchMovement : MonoBehaviour
     {
         transform.position += direction * moveDistance;
 
-        // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
+        // E?er ileriye do?ru hareket ettiyse ve yeni pozisyon en y?ksek z pozisyonundan daha b?y?kse hareket olay?n? tetikle
         if (direction == Vector3.forward && transform.position.z > maxZPosition)
         {
             maxZPosition = transform.position.z;
@@ -121,21 +121,21 @@ public class PlayerTouchMovement : MonoBehaviour
 public class PlayerTouchMovement : MonoBehaviour
 {
 
-    public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
+    public float moveDistance = 2f; // Karakterin bir ad?m at?? mesafesi
     private Vector3 nextPosition; // Karakterin bir sonraki hedef pozisyonu
     private Vector2 startTouchPosition, endTouchPosition;
-    public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
-    private bool isSwiping = false; // Kaydýrma hareketini takip etmek için bayrak
+    public float swipeThreshold = 50f; // Minimum kayd?rma mesafesi
+    private bool isSwiping = false; // Kayd?rma hareketini takip etmek i?in bayrak
 
-    private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
+    private float maxZPosition; // Karakterin ula?t??? en y?ksek z pozisyonu
 
-    // Karakter hareket ettiðinde çaðrýlacak olay
+    // Karakter hareket etti?inde ?a?r?lacak olay
     public static event Action OnMoveForward;
 
     void Start()
     {
-        nextPosition = transform.position; // Baþlangýçta karakterin bulunduðu pozisyon
-        maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
+        nextPosition = transform.position; // Ba?lang??ta karakterin bulundu?u pozisyon
+        maxZPosition = transform.position.z; // Ba?lang?? z pozisyonu
     }
 
     void Update()
@@ -159,11 +159,11 @@ public class PlayerTouchMovement : MonoBehaviour
                 endTouchPosition = touch.position;
                 Vector2 swipeDirection = endTouchPosition - startTouchPosition;
 
-                if (isSwiping && swipeDirection.magnitude > swipeThreshold) // Minimum kaydýrma mesafesi
+                if (isSwiping && swipeDirection.magnitude > swipeThreshold) // Minimum kayd?rma mesafesi
                 {
                     if (Mathf.Abs(swipeDirection.x) > Mathf.Abs(swipeDirection.y))
                     {
-                        // Yatay kaydýrma
+                        // Yatay kayd?rma
                         if (swipeDirection.x > 0)
                         {
                             Move(Vector3.right);
@@ -175,7 +175,7 @@ public class PlayerTouchMovement : MonoBehaviour
                     }
                     else
                     {
-                        // Dikey kaydýrma
+                        // Dikey kayd?rma
                         if (swipeDirection.y > 0)
                         {
                             Move(Vector3.forward);
@@ -188,7 +188,7 @@ public class PlayerTouchMovement : MonoBehaviour
                 }
                 else if (!isSwiping)
                 {
-                    // Sadece ekrana týklama durumunda ileri gitme
+                    // Sadece ekrana t?klama durumunda ileri gitme
                     Move(Vector3.forward);
                 }
             }
@@ -203,10 +203,10 @@ public class PlayerTouchMovement : MonoBehaviour
         // Karakteri hedef pozisyona hareket ettirme
         transform.position = targetPosition;
 
-        // Bir sonraki hedef pozisyonunu güncelleme
+        // Bir sonraki hedef pozisyonunu g?ncelleme
         nextPosition = targetPosition;
 
-        // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
+        // E?er ileriye do?ru hareket ettiyse ve yeni pozisyon en y?ksek z pozisyonundan daha b?y?kse hareket olay?n? tetikle
         if (direction == Vector3.forward && transform.position.z > maxZPosition)
         {
             maxZPosition = transform.position.z;
