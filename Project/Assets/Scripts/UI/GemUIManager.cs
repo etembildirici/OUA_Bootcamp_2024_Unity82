@@ -27,6 +27,6 @@ public class GemUIManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        gemCountText.text = "Gems: " + gemCount;
+        gemCountText.text = " " + gemCount;
     }
 }
