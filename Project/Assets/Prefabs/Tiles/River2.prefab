@@ -991,7 +991,9 @@ MonoBehaviour:
   minSpawnInterval: 4
   maxSpawnInterval: 7
   minMoveSpeed: 1.5
-  maxMoveSpeed: 3
+  maxMoveSpeed: 2.8
+  initialGridSetCount: 3
+  initialGridSpacing: 12
   gridCount: 5
   riverWidth: 44
   riverDirection: 1
