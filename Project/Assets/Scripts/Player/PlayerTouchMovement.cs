@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class PlayerTouchMovement : MonoBehaviour
 {
-    Animator characterAnim;
+    public Animator characterAnim;
+    public Transform character;
     public Transform[] characterList;
     public float moveDistance = 2f; // Karakterin bir adým atýþ mesafesi
     private Vector2 startTouchPosition, endTouchPosition;
     public float swipeThreshold = 50f; // Minimum kaydýrma mesafesi
     private bool isSwiping = false; // Kaydýrma hareketini takip etmek için bayrak
     public LayerMask obstacleLayer; // Engellerin bulunduðu katman
-    public int maxBackwardSteps = 4; // Karakterin maksimum geri adým sayýsý
+
     private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
-    
+    private bool isMoving = false; // Karakterin hareket edip etmediðini kontrol için bayrak
+    private float currentBackwardSteps = 0f; // Þu anki geri adým sayýsý
+    private float maxBackwardSteps = 4f; // Maksimum geri adým sayýsý
 
     // Karakter hareket ettiðinde çaðrýlacak olay
     public static event Action OnMoveForward;
@@ -23,13 +26,16 @@ public class PlayerTouchMovement : MonoBehaviour
     {
         CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
         int index = characterSelectionScript.index;
-        characterAnim = characterList[index].GetComponent<Animator>();
+        character = characterList[index];
+        characterAnim = character.GetComponent<Animator>();
 
         maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
     }
 
     void Update()
     {
+        isMoving = false; // Her karede hareket bayraðýný sýfýrla
+
         // Dokunmatik ekran kontrolleri
         foreach (Touch touch in Input.touches)
         {
@@ -83,6 +89,12 @@ public class PlayerTouchMovement : MonoBehaviour
                 }
             }
         }
+
+        // Karakter hareket etmiyorsa animasyon hýzýný sýfýrla
+        if (!isMoving && characterAnim != null)
+        {
+            characterAnim.SetFloat("hiz", 0.0f);
+        }
     }
 
     private void TryMove(Vector3 direction, Quaternion rotation)
@@ -91,7 +103,7 @@ public class PlayerTouchMovement : MonoBehaviour
         Vector3 targetPosition = transform.position + direction * moveDistance;
 
         // Geri gitme sýnýrýný kontrol et
-        if (direction == Vector3.back && transform.position.z - moveDistance < maxZPosition - (maxBackwardSteps * moveDistance))
+        if (direction == Vector3.back && transform.position.z - moveDistance < maxZPosition - maxBackwardSteps * moveDistance)
         {
             Debug.Log("Geri gitme sýnýrýna ulaþýldý.");
             return;
@@ -126,18 +138,25 @@ public class PlayerTouchMovement : MonoBehaviour
             characterAnim.SetFloat("hiz", 0.4f);
         }
 
+        isMoving = true; // Karakter hareket ediyor
+
         // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
-        if (direction == Vector3.forward && transform.position.z > maxZPosition)
+        if (direction == Vector3.forward)
         {
-            maxZPosition = transform.position.z;
-            OnMoveForward?.Invoke();
+            if (transform.position.z > maxZPosition)
+            {
+                maxZPosition = transform.position.z;
+                currentBackwardSteps = 0; // Geri adým sayýsýný sýfýrla
+                OnMoveForward?.Invoke();
+            }
         }
         else if (direction == Vector3.back)
         {
-            characterAnim.SetFloat("hiz", 0.0f);
+            currentBackwardSteps++; // Geri adým sayýsýný artýr
         }
     }
 }
+
 
 
 /*
