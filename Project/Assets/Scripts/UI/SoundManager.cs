@@ -40,6 +40,7 @@ public class SoundManager : MonoBehaviour
             // Sesi kapat
             AudioListener.volume = 0.0f;
         }
+     
     }
 
     private void UpdateSoundIcon()

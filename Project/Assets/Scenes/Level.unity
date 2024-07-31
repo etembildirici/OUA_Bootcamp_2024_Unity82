@@ -137,11 +137,55 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1094379301077300296, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 30bf3d52f89dc493e932e3c9654fd532,
+        type: 2}
+    - target: {fileID: 1094379301077300296, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5883981102868823189, guid: 30bf3d52f89dc493e932e3c9654fd532,
+        type: 2}
+    - target: {fileID: 1094379301077300296, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785555380667821320, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c316434af71c248328224b7cf2c5c6a2,
+        type: 2}
+    - target: {fileID: 5785555380667821320, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5883981102868823189, guid: c316434af71c248328224b7cf2c5c6a2,
+        type: 2}
+    - target: {fileID: 5785555380667821320, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6108866848092411156, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1864403202}
+    - target: {fileID: 7261490002928825257, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261490002928825257, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7888447096137994475, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: playerTouchMovement
