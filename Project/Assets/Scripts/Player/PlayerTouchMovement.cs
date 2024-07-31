@@ -25,6 +25,9 @@ public class PlayerTouchMovement : MonoBehaviour
     // AudioSource bileþeni
     public AudioSource moveSound; // Hareket sesini çalacak AudioSource
 
+    // Hareket süresi
+    public float moveDuration = 0.2f;
+
     void Start()
     {
         CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
@@ -43,7 +46,8 @@ public class PlayerTouchMovement : MonoBehaviour
 
     void Update()
     {
-        isMoving = false; // Her karede hareket bayraðýný sýfýrla
+        if (isMoving)
+            return; // Karakter hareket halindeyse baþka bir hareket baþlatma
 
         // Dokunmatik ekran kontrolleri
         foreach (Touch touch in Input.touches)
@@ -122,7 +126,7 @@ public class PlayerTouchMovement : MonoBehaviour
         if (!IsObstacleInDirection(direction))
         {
             // Eðer engel yoksa karakteri hedef pozisyona hareket ettir
-            moveCharacter(direction, rotation);
+            StartCoroutine(MoveCharacter(direction, rotation, targetPosition));
         }
     }
 
@@ -137,23 +141,38 @@ public class PlayerTouchMovement : MonoBehaviour
         return false;
     }
 
-    private void moveCharacter(Vector3 direction, Quaternion rotation)
+    private IEnumerator MoveCharacter(Vector3 direction, Quaternion rotation, Vector3 targetPosition)
     {
-        transform.position += direction * moveDistance;
-        transform.rotation = rotation;
+        isMoving = true; // Karakterin hareket ettiðini belirt
+
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0;
 
         if (characterAnim != null)
         {
             characterAnim.SetFloat("hiz", 0.4f);
         }
 
-        // Karakter hareket ediyorsa ve ses kaynaðý atanmýþsa sesi çal
-        if (moveSound != null && !isMoving)
+        // Hareket sesi
+        if (moveSound != null)
         {
-            moveSound.Play(); // Ses çal
+            moveSound.Play();
         }
 
-        isMoving = true; // Karakter hareket ediyor
+        // Hareketi lineer interpolasyonla gerçekleþtir
+        while (elapsedTime < moveDuration)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / moveDuration);
+            transform.rotation = rotation;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPosition; // Nihai pozisyon
+        transform.rotation = rotation;
+
+        // Hareket tamamlandý
+        isMoving = false;
 
         // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
         if (direction == Vector3.forward)
@@ -169,8 +188,15 @@ public class PlayerTouchMovement : MonoBehaviour
         {
             currentBackwardSteps++; // Geri adým sayýsýný artýr
         }
+
+        // Karakter hareket etmiyorsa animasyon hýzýný sýfýrla
+        if (!isMoving && characterAnim != null)
+        {
+            characterAnim.SetFloat("hiz", 0.0f);
+        }
     }
 }
+
 
 
 
