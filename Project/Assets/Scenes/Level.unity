@@ -124,6 +124,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &19306689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 802201297416678823, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+    type: 3}
+  m_PrefabInstance: {fileID: 4673152248647595485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &75287149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,6 +307,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5258318422bf04870a889f0e7872a403, type: 3}
+--- !u!4 &276722852 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3265954088911835256, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+    type: 3}
+  m_PrefabInstance: {fileID: 4673152248647595485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &288972115 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2025105524687326366, guid: 5258318422bf04870a889f0e7872a403,
@@ -324,6 +336,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2038800391490498692, guid: 5258318422bf04870a889f0e7872a403,
     type: 3}
   m_PrefabInstance: {fileID: 75287149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &616647898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8497584330946914374, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+    type: 3}
+  m_PrefabInstance: {fileID: 4673152248647595485}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &755026570 stripped
 MonoBehaviour:
@@ -405,6 +423,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ad6f9b5d0bb4bea8635db33abcfa75, type: 3}
+--- !u!4 &925365206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1329497228726504443, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+    type: 3}
+  m_PrefabInstance: {fileID: 4673152248647595485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1306704658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6010873632154719028, guid: 5258318422bf04870a889f0e7872a403,
@@ -860,6 +884,31 @@ PrefabInstance:
       propertyPath: waterSound
       value: 
       objectReference: {fileID: 5951495158142199462}
+    - target: {fileID: 6244759551113192628, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: characterList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244759551113192628, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: characterList.Array.data[0]
+      value: 
+      objectReference: {fileID: 616647898}
+    - target: {fileID: 6244759551113192628, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: characterList.Array.data[1]
+      value: 
+      objectReference: {fileID: 925365206}
+    - target: {fileID: 6244759551113192628, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: characterList.Array.data[2]
+      value: 
+      objectReference: {fileID: 19306689}
+    - target: {fileID: 6244759551113192628, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: characterList.Array.data[3]
+      value: 
+      objectReference: {fileID: 276722852}
     - target: {fileID: 6278713259635893397, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
         type: 3}
       propertyPath: m_LocalPosition.x
