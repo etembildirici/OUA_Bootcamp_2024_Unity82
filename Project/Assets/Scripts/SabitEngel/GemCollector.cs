@@ -5,19 +5,24 @@ using UnityEngine;
 public class GemCollector : MonoBehaviour
 {
     public GemUIManager gemUIManager; // GemUIManager referansı
+    public AudioSource gemSound; // Gem ses kaynağı
 
     void OnTriggerEnter(Collider other)
     {
+        // Eğer çarpan nesne "Gem" tag'ine sahipse
         if (other.CompareTag("Gem"))
         {
             // Elması topla ve UI'ı güncelle
             gemUIManager.IncrementGemCount();
 
-            // Gem nesnesindeki AudioSource bileşenini bul ve sesi çal
-            AudioSource gemAudioSource = other.GetComponent<AudioSource>();
-            if (gemAudioSource != null)
+            // Eğer ses kaynağı atanmışsa, sesi çal
+            if (gemSound != null)
             {
-                gemAudioSource.Play();
+                gemSound.Play();
+            }
+            else
+            {
+                Debug.LogWarning("Gem ses kaynağı atanmadı.");
             }
 
             // Elmayı yok et
@@ -25,3 +30,5 @@ public class GemCollector : MonoBehaviour
         }
     }
 }
+
+
