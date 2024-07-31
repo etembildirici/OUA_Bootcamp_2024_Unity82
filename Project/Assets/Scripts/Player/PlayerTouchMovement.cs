@@ -22,6 +22,9 @@ public class PlayerTouchMovement : MonoBehaviour
     // Karakter hareket ettiðinde çaðrýlacak olay
     public static event Action OnMoveForward;
 
+    // AudioSource bileþeni
+    public AudioSource moveSound; // Hareket sesini çalacak AudioSource
+
     void Start()
     {
         CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
@@ -30,6 +33,12 @@ public class PlayerTouchMovement : MonoBehaviour
         characterAnim = character.GetComponent<Animator>();
 
         maxZPosition = transform.position.z; // Baþlangýç z pozisyonu
+
+        // Eðer AudioSource bileþeni atanmýþsa, karakterin hareket ettiðinde ses çalacak
+        if (moveSound == null)
+        {
+            Debug.LogWarning("moveSound AudioSource bileþeni atanmadý!");
+        }
     }
 
     void Update()
@@ -138,6 +147,12 @@ public class PlayerTouchMovement : MonoBehaviour
             characterAnim.SetFloat("hiz", 0.4f);
         }
 
+        // Karakter hareket ediyorsa ve ses kaynaðý atanmýþsa sesi çal
+        if (moveSound != null && !isMoving)
+        {
+            moveSound.Play(); // Ses çal
+        }
+
         isMoving = true; // Karakter hareket ediyor
 
         // Eðer ileriye doðru hareket ettiyse ve yeni pozisyon en yüksek z pozisyonundan daha büyükse hareket olayýný tetikle
@@ -156,6 +171,8 @@ public class PlayerTouchMovement : MonoBehaviour
         }
     }
 }
+
+
 
 
 
