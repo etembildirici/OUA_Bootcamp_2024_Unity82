@@ -14,6 +14,7 @@ public class PlatformGenerator : MonoBehaviour
     private Queue<GameObject> activeTiles = new Queue<GameObject>(); // Aktif prefablarý tutan kuyruk
     private Vector3 nextSpawnPosition;
     private GameObject lastSpawnedTile; // Son eklenen prefabý tutmak için deðiþken
+    private GameObject lastSpawnedRiver; // Son eklenen nehir prefabý tutmak için deðiþken
 
     void Start()
     {
@@ -76,18 +77,19 @@ public class PlatformGenerator : MonoBehaviour
             }
         }
 
-        if (lastSpawnedTile != null)
+        if (lastSpawnedRiver != null && (newTile.CompareTag("River") || newTile.CompareTag("River2")))
         {
-            if (lastSpawnedTile.CompareTag("River") && newTile.CompareTag("River"))
-            {
-                Destroy(newTile);
-                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
-            }
-            else if (lastSpawnedTile.CompareTag("River2") && newTile.CompareTag("River2"))
+            if (lastSpawnedRiver.CompareTag("River") && newTile.CompareTag("River"))
             {
                 Destroy(newTile);
                 newTile = Instantiate(prefabs[4], nextSpawnPosition, Quaternion.identity, level.transform);
             }
+            else if (lastSpawnedRiver.CompareTag("River2") && newTile.CompareTag("River2"))
+            {
+                Destroy(newTile);
+                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
+            }
+            lastSpawnedRiver = newTile;
         }
 
         activeTiles.Enqueue(newTile);
