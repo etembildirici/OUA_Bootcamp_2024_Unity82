@@ -1,10 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerWaterDetection : MonoBehaviour
 {
+    public Transform[] characterList;
+    private Animator characterAnim;
+    private PlayerTouchMovement playerTouchMovementScript;
     public LayerMask waterLayer; // Su katmanýný belirleyin
     public float detectionDistance = 1f; // Su tespit mesafesi
     public float sinkingSpeed = 0.5f; // Karakterin suya düþme hýzý
@@ -14,6 +15,32 @@ public class PlayerWaterDetection : MonoBehaviour
 
     private bool isSinking = false;
     private float initialYPosition;
+
+    private void Start()
+    {
+        playerTouchMovementScript = GetComponent<PlayerTouchMovement>();
+        CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
+        int index = characterSelectionScript.index;
+
+        if (index < 0 || index >= characterList.Length)
+        {
+            Debug.LogError("Geçersiz karakter index'i!");
+            return;
+        }
+
+        characterAnim = characterList[index].GetComponent<Animator>();
+
+        // Null kontrolü
+        if (characterAnim == null)
+        {
+            Debug.LogError("Animator bileþeni bulunamadý!");
+        }
+        else
+        {
+            Debug.Log("Animator bileþeni baþarýyla alýndý.");
+        }
+    }
+
 
     void Update()
     {
@@ -25,7 +52,6 @@ public class PlayerWaterDetection : MonoBehaviour
 
     void DetectWater()
     {
-        // Karakterin altýna doðru bir ray gönderin
         Ray ray = new Ray(transform.position, Vector3.down);
         RaycastHit[] hits = Physics.RaycastAll(ray, detectionDistance);
 
@@ -49,10 +75,8 @@ public class PlayerWaterDetection : MonoBehaviour
             }
         }
 
-        // Eðer sadece suya temas ediyorsa ve altýnda baþka bir nesne yoksa
         if (isWaterDetected && !isNonWaterDetected)
         {
-            // Karakterin yüksekliðine göre suya düþme iþlemlerini burada gerçekleþtirin
             Debug.Log("Suya düþtü!");
             StartSinking();
         }
@@ -60,42 +84,53 @@ public class PlayerWaterDetection : MonoBehaviour
 
     void StartSinking()
     {
-        // Hareket scriptini devre dýþý býrak
-        GetComponent<PlayerTouchMovement>().enabled = false;
-
-        // Karakteri suya batýrma iþlemini baþlat
+        playerTouchMovementScript.enabled = false;
         isSinking = true;
         initialYPosition = transform.position.y;
 
-        // Eðer su sesi atanmýþsa çal
-        if (waterSound != null)
+        // Suya batma animasyonunu tetikle
+        if (characterAnim != null)
         {
-            StartCoroutine(PlaySoundWithDelay(soundDelay));
+            Debug.Log("Animasyon parametresi 'Water Death' ayarlandý.");
+            characterAnim.SetTrigger("Water Death");
+        }
+        else
+        {
+            Debug.LogWarning("Animator bileþeni ayarlanamadý!");
         }
 
-        StartCoroutine(Sink());
-    }
+            if (waterSound != null)
+            {
+                StartCoroutine(PlaySoundWithDelay(soundDelay));
+            }
 
-    IEnumerator Sink()
-    {
-        while (transform.position.y > initialYPosition - sinkingDepth)
-        {
-            // Karakterin y pozisyonunu yavaþça azalt
-            transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
-
-            // Belirli bir süre bekle
-            yield return null;
+            StartCoroutine(Sink());
         }
 
-        // Belirli bir mesafe düþtükten sonra batmayý durdur
-        isSinking = false;
+        IEnumerator Sink()
+        {
+            while (transform.position.y > initialYPosition - sinkingDepth)
+            {
+                transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
+                yield return null;
+            }
+
+            isSinking = false;
+
+            // Animasyon bitiminde yapýlmasý gerekenler varsa buraya eklenebilir.
+            // Örneðin animasyon bitince baþka bir state'e geçiþ yapýlabilir.
+            Debug.Log("Sinking tamamlandý.");
+        }
+
+        IEnumerator PlaySoundWithDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            if (waterSound != null)
+            {
+                waterSound.Play();
+            }
+        }
     }
 
-    IEnumerator PlaySoundWithDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        waterSound.Play();
-    }
-}
 
 
