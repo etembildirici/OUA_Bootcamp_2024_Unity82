@@ -471,6 +471,8 @@ MonoBehaviour:
   spikeTrapAnim: {fileID: 0}
   openCloseDelay: 2
   startDelay: 2
+  trapCloseProbability: 0.5
+  trapDelayProbability: 0.5
 --- !u!1 &1533954398984724
 GameObject:
   m_ObjectHideFlags: 0
