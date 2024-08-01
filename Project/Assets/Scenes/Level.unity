@@ -148,6 +148,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1864403202}
+    - target: {fileID: 6497280915980332902, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497280915980332902, guid: 5258318422bf04870a889f0e7872a403,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -266
+      objectReference: {fileID: 0}
     - target: {fileID: 7765260310442438317, guid: 5258318422bf04870a889f0e7872a403,
         type: 3}
       propertyPath: playerTouchMovement
@@ -835,6 +845,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3777127216776773220, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777127216776773220, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777127216776773220, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4196706085377153296, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
         type: 3}
       propertyPath: moveSound
@@ -949,6 +974,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305569175729114851, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_Range
+      value: 8.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305569175729114851, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 9126169994293703420, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
         type: 3}
