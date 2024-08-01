@@ -6,8 +6,7 @@ using TMPro;
 public class GemUIManager : MonoBehaviour
 {
     public TextMeshProUGUI gemCountText;
-    public int gemCount;
-
+    private int gemCount;
 
     private void Start()
     {
@@ -20,10 +19,13 @@ public class GemUIManager : MonoBehaviour
     {
         gemCount++;
         UpdateUI();
+
+        // Gem sayısını kaydet
+        PlayerPrefs.SetInt("GemCount", gemCount);
     }
 
     private void UpdateUI()
     {
-        gemCountText.text = " " + gemCount;
+        gemCountText.text = "Gems: " + gemCount;
     }
 }

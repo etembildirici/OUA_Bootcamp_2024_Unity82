@@ -196,19 +196,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 160889140103231895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnSoundToggleButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &7765260310442438317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +213,7 @@ MonoBehaviour:
   soundIcon: {fileID: 4761180546101941622}
   soundOnIcon: {fileID: 21300000, guid: 6183cda87d24a4003b644c384d43cdb7, type: 3}
   soundOffIcon: {fileID: 21300000, guid: 818166e7a2d174715b350a2be9ba960a, type: 3}
+  playerTouchMovement: {fileID: 0}
 --- !u!1 &917483755756912193
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemCountText: {fileID: 5785555380667821320}
+  gemCount: 0
 --- !u!1 &2038800391490498692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,18 +1592,6 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: GoToCharacterSelection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnCharacterButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
