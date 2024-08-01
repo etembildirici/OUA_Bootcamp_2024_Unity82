@@ -11,7 +11,7 @@ public class GemUIManager : MonoBehaviour
     private void Start()
     {
         // Önceden kaydedilmiş gem sayısını al
-        gemCount = PlayerPrefs.GetInt("GemCount", 300);
+        gemCount = PlayerPrefs.GetInt("GemCount", 99);
         UpdateUI();
     }
 
