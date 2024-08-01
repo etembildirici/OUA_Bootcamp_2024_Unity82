@@ -8,6 +8,7 @@ public class PlayerSpikeDetection : MonoBehaviour
     public Transform[] characterList;
     public AudioSource deathSound; // Ölüm sesi kaynaðý referansý
     private bool isHitBySpike = false;
+    private bool isSoundPlayed = false; // Sesin çalýp çalmadýðýný kontrol etmek için eklenen deðiþken
     private Animator characterAnim;
     private PlayerTouchMovement playerTouchMovementScript;
 
@@ -29,24 +30,28 @@ public class PlayerSpikeDetection : MonoBehaviour
     {
         if (other.CompareTag("Spike"))
         {
-            if (characterAnim != null)
+            if (!isHitBySpike)
             {
-                // Ölüm animasyonunu tetikle
-                characterAnim.SetTrigger("Death");
+                if (characterAnim != null)
+                {
+                    // Ölüm animasyonunu tetikle
+                    characterAnim.SetTrigger("Death");
+                }
+
+                if (deathSound != null && !isSoundPlayed)
+                {
+                    // Ölüm sesi çal
+                    deathSound.Play();
+                    isSoundPlayed = true; // Sesi çaldýktan sonra bu deðiþkeni true yap
+                }
+
+                GetComponent<PlayerTouchMovement>().enabled = false;
+                isHitBySpike = true;
+                Debug.Log("Karakter mýzraða çarptý.");
+
+                // Opsiyonel olarak sahneyi yeniden yükleme veya oyun bitti iþlemi
+                // StartCoroutine(ReloadSceneAfterDelay(2f));
             }
-
-            if (deathSound != null)
-            {
-                // Ölüm sesi çal
-                deathSound.Play();
-            }
-
-            GetComponent<PlayerTouchMovement>().enabled = false;
-            isHitBySpike = true;
-            Debug.Log("Karakter mýzraða çarptý.");
-
-            // Opsiyonel olarak sahneyi yeniden yükleme veya oyun bitti iþlemi
-            // StartCoroutine(ReloadSceneAfterDelay(2f));
         }
     }
 
@@ -70,5 +75,6 @@ public class PlayerSpikeDetection : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
+
 
 
