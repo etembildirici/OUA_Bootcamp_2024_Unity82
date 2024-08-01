@@ -10,6 +10,8 @@ public class GemText : MonoBehaviour
 
     void Start()
     {
+        gemCountLast = PlayerPrefs.GetInt("GemCount", 0);
+        gemCountText.text = " " + gemCountLast;
         UpdateGemCount();
     }
 

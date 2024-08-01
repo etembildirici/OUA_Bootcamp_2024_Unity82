@@ -10,7 +10,7 @@ public class CharacterSelection : MonoBehaviour
     public Button buyButton;
     public Button selectButton;
     public TextMeshProUGUI buyButtonText;
-    private int[] characterPrices = { 0, 20, 300, 400 }; // Her karakterin fiyatý
+    private int[] characterPrices = { 0, 20,1, 400 }; // Her karakterin fiyatý
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private float swipeThreshold = 50f;
@@ -115,14 +115,14 @@ public class CharacterSelection : MonoBehaviour
         if (IsCharacterOwned(index) || characterPrices[index] == 0)
         {
             buyButton.interactable = false;
-            buyButtonText.text = "Sold";
+            buyButtonText.text = "-";
             selectButton.interactable = true;
             selectButton.image.color = Color.white;
         }
         else
         {
             buyButton.interactable = true;
-            buyButtonText.text =  characterPrices[index].ToString();
+            buyButtonText.text = characterPrices[index].ToString();
             selectButton.interactable = false;
             selectButton.image.color = Color.gray;
         }
