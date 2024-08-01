@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gems:
   - {fileID: 628813993634681707, guid: f2a282b5b70fe402a8ddb0453e20dcc6, type: 3}
-  gemProbability: 0.1
+  gemProbability: 0.03
   predefinedPosition: {x: 0, y: 1, z: 0}
   validTags:
   - FloorBlack
