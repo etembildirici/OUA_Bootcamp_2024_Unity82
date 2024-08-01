@@ -1,18 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CharacterSelection : MonoBehaviour
 {
     private GameObject[] characterList;
     public int index;
+    public Button buyButton;
+    public Button selectButton;
+    public TextMeshProUGUI buyButtonText;
+    private int[] characterPrices = { 0, 20, 300, 400 }; // Her karakterin fiyatý
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private float swipeThreshold = 50f;
 
     void Start()
     {
-        index = PlayerPrefs.GetInt("CharacterSelected");
+        index = PlayerPrefs.GetInt("CharacterSelected", 0);
         characterList = new GameObject[transform.childCount];
         for (int i = 0; i < characterList.Length; i++)
             characterList[i] = transform.GetChild(i).gameObject;
@@ -20,6 +25,8 @@ public class CharacterSelection : MonoBehaviour
             go.SetActive(false);
         if (characterList[index])
             characterList[index].SetActive(true);
+
+        UpdateButtons();
     }
 
     void Update()
@@ -67,6 +74,7 @@ public class CharacterSelection : MonoBehaviour
         if (index < 0)
             index = characterList.Length - 1;
         characterList[index].SetActive(true);
+        UpdateButtons();
     }
 
     public void ToggleRight()
@@ -76,6 +84,7 @@ public class CharacterSelection : MonoBehaviour
         if (index == characterList.Length)
             index = 0;
         characterList[index].SetActive(true);
+        UpdateButtons();
     }
 
     public void PlayButton()
@@ -84,14 +93,39 @@ public class CharacterSelection : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
-
     public void BuyingButton()
     {
+        int gems = PlayerPrefs.GetInt("GemCount", 0);
+        if (gems >= characterPrices[index] && !IsCharacterOwned(index))
+        {
+            gems -= characterPrices[index];
+            PlayerPrefs.SetInt("GemCount", gems);
+            PlayerPrefs.SetInt("CharacterOwned" + index, 1);
+            UpdateButtons();
+        }
+    }
 
+    private bool IsCharacterOwned(int characterIndex)
+    {
+        return PlayerPrefs.GetInt("CharacterOwned" + characterIndex, 0) == 1;
+    }
+
+    private void UpdateButtons()
+    {
+        if (IsCharacterOwned(index) || characterPrices[index] == 0)
+        {
+            buyButton.interactable = false;
+            buyButtonText.text = "Sold";
+            selectButton.interactable = true;
+            selectButton.image.color = Color.white;
+        }
+        else
+        {
+            buyButton.interactable = true;
+            buyButtonText.text =  characterPrices[index].ToString();
+            selectButton.interactable = false;
+            selectButton.image.color = Color.gray;
+        }
     }
 }
-
-
-
-
 
