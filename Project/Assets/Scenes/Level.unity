@@ -985,6 +985,11 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 56
       objectReference: {fileID: 0}
+    - target: {fileID: 8305569175729114851, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 9126169994293703420, guid: 0429fc2dfe39ab14cb0c1d4689e25814,
         type: 3}
       propertyPath: m_TagString
