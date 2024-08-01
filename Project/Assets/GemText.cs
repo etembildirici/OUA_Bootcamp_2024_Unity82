@@ -10,14 +10,19 @@ public class GemText : MonoBehaviour
 
     void Start()
     {
-        gemCountLast = PlayerPrefs.GetInt("GemCount", 0);
+        gemCountLast = PlayerPrefs.GetInt("GemCount", 300);
         gemCountText.text = " " + gemCountLast;
+        
+    }
+
+    private void Update()
+    {
         UpdateGemCount();
     }
 
     public void UpdateGemCount()
     {
-        gemCountLast = PlayerPrefs.GetInt("GemCount", 0);
+        gemCountLast = PlayerPrefs.GetInt("GemCount", 300);
         gemCountText.text = " " + gemCountLast;
     }
 }
