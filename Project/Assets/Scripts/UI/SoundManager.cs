@@ -54,5 +54,5 @@ public class SoundManager : MonoBehaviour
             soundIcon.sprite = soundOffIcon;
         }
     }
-   
+
 }
