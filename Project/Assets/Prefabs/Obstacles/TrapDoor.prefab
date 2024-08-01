@@ -93,6 +93,8 @@ MonoBehaviour:
   trapDoorAnim: {fileID: 0}
   openCloseDelay: 2
   startDelay: 2
+  trapCloseProbability: 0.5
+  trapDelayProbability: 0.5
 --- !u!1 &1701452428705890
 GameObject:
   m_ObjectHideFlags: 0

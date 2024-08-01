@@ -245,6 +245,8 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
+  moveSound: {fileID: 0}
+  moveDuration: 0.1
 --- !u!114 &6244759551113192628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,12 +259,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83355abba79262844a9bc4d4679091a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterList: []
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
   detectionDistance: 2
   sinkingSpeed: 2
   sinkingDepth: 5
+  waterSound: {fileID: 0}
+  soundDelay: 0.5
 --- !u!114 &7544066575285621771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +285,7 @@ MonoBehaviour:
   - {fileID: 1329497228726504443}
   - {fileID: 802201297416678823}
   - {fileID: 3265954088911835256}
+  deathSound: {fileID: 0}
 --- !u!114 &7295849078614473164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemUIManager: {fileID: 0}
+  gemSound: {fileID: 0}
 --- !u!1001 &75520793441447529
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,13 +1,12 @@
-using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-//using UnityEngine.SceneManagement;
+// using UnityEngine.SceneManagement; // SceneManager kullanmanýz gerekiyorsa yorum satýrýndan çýkarabilirsiniz
 
 public class PlayerSpikeDetection : MonoBehaviour
 {
     public Transform[] characterList;
+    public AudioSource deathSound; // Ölüm sesi kaynaðý referansý
     private bool isHitBySpike = false;
     private Animator characterAnim;
     private PlayerTouchMovement playerTouchMovementScript;
@@ -19,6 +18,11 @@ public class PlayerSpikeDetection : MonoBehaviour
         int index = characterSelectionScript.index;
         characterAnim = characterList[index].GetComponent<Animator>();
 
+        // Eðer deathSound atanmýþsa, doðruluðunu kontrol et
+        if (deathSound == null)
+        {
+            Debug.LogWarning("deathSound AudioSource bileþeni atanmadý.");
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -29,6 +33,12 @@ public class PlayerSpikeDetection : MonoBehaviour
             {
                 // Ölüm animasyonunu tetikle
                 characterAnim.SetTrigger("Death");
+            }
+
+            if (deathSound != null)
+            {
+                // Ölüm sesi çal
+                deathSound.Play();
             }
 
             GetComponent<PlayerTouchMovement>().enabled = false;
@@ -60,4 +70,5 @@ public class PlayerSpikeDetection : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
+
 
