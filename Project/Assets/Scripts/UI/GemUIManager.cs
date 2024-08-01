@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class GemUIManager : MonoBehaviour
 {
     public TextMeshProUGUI gemCountText;
-    private int gemCount;
+    public int gemCount;
+
 
     private void Start()
     {
@@ -20,9 +20,6 @@ public class GemUIManager : MonoBehaviour
     {
         gemCount++;
         UpdateUI();
-
-        // Gem sayısını kaydet
-        PlayerPrefs.SetInt("GemCount", gemCount);
     }
 
     private void UpdateUI()
