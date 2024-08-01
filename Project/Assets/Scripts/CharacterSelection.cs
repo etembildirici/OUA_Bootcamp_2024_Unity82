@@ -10,7 +10,7 @@ public class CharacterSelection : MonoBehaviour
     public Button buyButton;
     public Button selectButton;
     public TextMeshProUGUI buyButtonText;
-    private int[] characterPrices = { 0, 20,1, 400 }; // Her karakterin fiyatý
+    private int[] characterPrices = { 0, 100,200,300 }; // Her karakterin fiyatý
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private float swipeThreshold = 50f;
