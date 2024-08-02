@@ -17,7 +17,7 @@ public class PlayerTouchMovement : MonoBehaviour
     private float maxZPosition; // Karakterin ulaþtýðý en yüksek z pozisyonu
     private bool isMoving = false; // Karakterin hareket edip etmediðini kontrol için bayrak
     private float currentBackwardSteps = 0f; // Þu anki geri adým sayýsý
-    private float maxBackwardSteps = 4f; // Maksimum geri adým sayýsý
+    private float maxBackwardSteps = 5f; // Maksimum geri adým sayýsý
 
     // Karakter hareket ettiðinde çaðrýlacak olay
     public static event Action OnMoveForward;

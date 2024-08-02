@@ -70,12 +70,12 @@ public class PlatformGenerator : MonoBehaviour
             if (lastSpawnedTile.CompareTag("FloorGreyBlack02") && newTile.CompareTag("FloorGreyBlack02"))
             {
                 Destroy(newTile);
-                newTile = Instantiate(prefabs[2], nextSpawnPosition, Quaternion.identity, level.transform);
+                newTile = Instantiate(prefabs[1], nextSpawnPosition, Quaternion.identity, level.transform);
             }
             else if (lastSpawnedTile.CompareTag("FloorGreyBlack01") && newTile.CompareTag("FloorGreyBlack01"))
             {
                 Destroy(newTile);
-                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
+                newTile = Instantiate(prefabs[2], nextSpawnPosition, Quaternion.identity, level.transform);
             }
         }
 
@@ -85,13 +85,13 @@ public class PlatformGenerator : MonoBehaviour
             if (lastSpawnedRiver == "River")
             {
                 Destroy(newTile);
-                newTile = Instantiate(prefabs[5], nextSpawnPosition, Quaternion.identity, level.transform);
+                newTile = Instantiate(prefabs[4], nextSpawnPosition, Quaternion.identity, level.transform);
                 lastSpawnedRiver = "River2";
             }
             else
             {
                 Destroy(newTile);
-                newTile = Instantiate(prefabs[4], nextSpawnPosition, Quaternion.identity, level.transform);
+                newTile = Instantiate(prefabs[3], nextSpawnPosition, Quaternion.identity, level.transform);
                 lastSpawnedRiver = "River";
             }
 
