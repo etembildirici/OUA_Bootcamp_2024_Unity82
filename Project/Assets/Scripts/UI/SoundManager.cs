@@ -19,6 +19,17 @@ public class SoundManager : MonoBehaviour
         isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
         UpdateSoundIcon();
         soundToggleButton.onClick.AddListener(ToggleSound);
+
+        if (isSoundOn)
+        {
+            // Sesi aç
+            AudioListener.volume = 1.0f;
+        }
+        else
+        {
+            // Sesi kapat
+            AudioListener.volume = 0.0f;
+        }
     }
 
     public void ToggleSound()
