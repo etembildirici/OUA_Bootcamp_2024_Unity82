@@ -1,6 +1,6 @@
 # Oyun ve Uygulama Akademisi Bootcamp 2024
 
-# Takım İsmi
+## Takım İsmi
 
 Unity 82
 
@@ -15,7 +15,7 @@ Unity 82
 
 # Oyun Bilgileri
 
-# Dungeon Run
+## Dungeon Run
 
 Gizemli ve büyülü bir zindanın derinliklerinde, antik bir hazineyi bulmak için cesur bir maceracı yola çıkar. Ancak bu zindan, sadece cesarete değil, aynı zamanda hıza ve çevikliğe de meydan okuyan tuzaklar ve engellerle doludur. Oyuncu, bu zorlu zindanın koridorlarında ilerlerken hem değerli hazineleri toplamaya çalışacak hem de ölümcül tuzaklardan kaçacak. Her bir adım, daha büyük tehlikeler ve daha büyük ödüller anlamına gelir. Dungeon Run'da, zindanın sırlarını keşfederken sınırlarınızı zorlayın ve tarihin derinliklerinde kaybolmuş bir efsane olun.
 
