@@ -6,6 +6,7 @@ public class PlayerWaterDetection : MonoBehaviour
     public Transform[] characterList;
     private Animator characterAnim;
     private PlayerTouchMovement playerTouchMovementScript;
+    private GridDetection gridDetection;
     public LayerMask waterLayer; // Su katmanýný belirleyin
     public float detectionDistance = 1f; // Su tespit mesafesi
     public float sinkingSpeed = 0.5f; // Karakterin suya düþme hýzý
@@ -19,6 +20,7 @@ public class PlayerWaterDetection : MonoBehaviour
     private void Start()
     {
         playerTouchMovementScript = GetComponent<PlayerTouchMovement>();
+        gridDetection = GetComponent<GridDetection>();
         CharacterSelection characterSelectionScript = transform.Find("Characters").GetComponent<CharacterSelection>();
         int index = characterSelectionScript.index;
 
@@ -85,6 +87,7 @@ public class PlayerWaterDetection : MonoBehaviour
     void StartSinking()
     {
         playerTouchMovementScript.enabled = false;
+        gridDetection.enabled = false;
         isSinking = true;
         initialYPosition = transform.position.y;
 

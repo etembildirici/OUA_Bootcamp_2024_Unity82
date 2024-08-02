@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class GridDetection : MonoBehaviour
 {
+    private PlayerTouchMovement playerTouchMovementScript;
+
+    private void Start()
+    {
+        playerTouchMovementScript = GetComponent<PlayerTouchMovement>();
+
+    }
+
     void Update()
     {
         DetectGrid();
@@ -20,12 +28,14 @@ public class GridDetection : MonoBehaviour
         {
             if (hit.collider.CompareTag("Grid"))
             {
+                playerTouchMovementScript.moveDuration = 0;
                 transform.parent = hit.transform;
                 transform.localPosition = new Vector3(0, transform.localPosition.y, 0); // Karakteri gridin merkezine ve y=0.5 konumuna ayarla
                 return;
             }
             else if (hit.collider.CompareTag("Tile") || hit.collider.CompareTag("Door"))
             {
+                playerTouchMovementScript.moveDuration = 0.1f;
                 transform.parent = hit.transform;
                 transform.position = new Vector3(hit.transform.position.x, transform.position.y, hit.transform.position.z);
                 transform.parent = null;
@@ -35,6 +45,7 @@ public class GridDetection : MonoBehaviour
         }
 
         transform.SetParent(null);
+        playerTouchMovementScript.moveDuration = 0.1f;
     }
 }
 
