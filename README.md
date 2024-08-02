@@ -152,7 +152,7 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 # Sprint 3
 
-- **Sprint içinde tamamlanması tahmin edilen puan:** 14
+- **Sprint içinde tamamlanması tahmin edilen puan:** 13
 
 - **Daily Scrum:** Daily Scrum toplantıları Whatsapp üzerinden ilerletilmiştir. Buna ek olarak ekiple toplantı yapmak ve kaynak paylaşımı gibi konularda Discord Kullanılmıştır. [Daily Scrum](https://docs.google.com/document/d/13p_JTg3TL57WwSS_qUjR2TsYESnGBXQen5RluShiAQQ/edit)
 
