@@ -88,6 +88,7 @@ public class PlayerWaterDetection : MonoBehaviour
     {
         playerTouchMovementScript.enabled = false;
         gridDetection.enabled = false;
+        transform.SetParent(null);
         isSinking = true;
         initialYPosition = transform.position.y;
 
