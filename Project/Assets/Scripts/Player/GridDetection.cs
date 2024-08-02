@@ -35,7 +35,15 @@ public class GridDetection : MonoBehaviour
             }
             else if (hit.collider.CompareTag("Tile") || hit.collider.CompareTag("Door"))
             {
-                playerTouchMovementScript.moveDuration = 0.1f;
+                if (hit.collider.CompareTag("Door"))
+                {
+                    playerTouchMovementScript.moveDuration = 0;
+                }
+                else
+                {
+                    playerTouchMovementScript.moveDuration = 0.1f;
+                }
+                    
                 transform.parent = hit.transform;
                 transform.position = new Vector3(hit.transform.position.x, transform.position.y, hit.transform.position.z);
                 transform.parent = null;

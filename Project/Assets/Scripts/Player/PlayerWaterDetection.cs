@@ -111,29 +111,29 @@ public class PlayerWaterDetection : MonoBehaviour
             StartCoroutine(Sink());
         }
 
-        IEnumerator Sink()
+    IEnumerator Sink()
+    {
+        while (transform.position.y > initialYPosition - sinkingDepth)
         {
-            while (transform.position.y > initialYPosition - sinkingDepth)
-            {
-                transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
-                yield return null;
-            }
-
-            isSinking = false;
-
-            // Animasyon bitiminde yapýlmasý gerekenler varsa buraya eklenebilir.
-            // Örneðin animasyon bitince baþka bir state'e geçiþ yapýlabilir.
-            Debug.Log("Sinking tamamlandý.");
+            transform.position -= new Vector3(0, sinkingSpeed * Time.deltaTime, 0);
+            yield return null;
         }
 
-        IEnumerator PlaySoundWithDelay(float delay)
+        isSinking = false;
+
+        // Animasyon bitiminde yapýlmasý gerekenler varsa buraya eklenebilir.
+        // Örneðin animasyon bitince baþka bir state'e geçiþ yapýlabilir.
+        Debug.Log("Sinking tamamlandý.");
+    }
+
+    IEnumerator PlaySoundWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (waterSound != null)
         {
-            yield return new WaitForSeconds(delay);
-            if (waterSound != null)
-            {
-                waterSound.Play();
-            }
+            waterSound.Play();
         }
+    }
     }
 
 
