@@ -15,21 +15,35 @@ Unity 82
 
 # Oyun Bilgileri
 
-## Oyun İsmi
-Dungeon Run
+# Dungeon Run
 
-## Oyun Açıklaması
-Oyunumuz tek oyunculu endless runner oyunudur. Oyuncu karakteri hareket ettirerek engellerden kaçar ve ileriye doğru gider. Bazı engellere değilirse kaybedilir. Toplanan coinlerle yeni bir karakter alınabilir. Oyun mobil platforma uygun bir şekilde tasarlandı.        
+Gizemli ve büyülü bir zindanın derinliklerinde, antik bir hazineyi bulmak için cesur bir maceracı yola çıkar. Ancak bu zindan, sadece cesarete değil, aynı zamanda hıza ve çevikliğe de meydan okuyan tuzaklar ve engellerle doludur. Oyuncu, bu zorlu zindanın koridorlarında ilerlerken hem değerli hazineleri toplamaya çalışacak hem de ölümcül tuzaklardan kaçacak. Her bir adım, daha büyük tehlikeler ve daha büyük ödüller anlamına gelir. Dungeon Run'da, zindanın sırlarını keşfederken sınırlarınızı zorlayın ve tarihin derinliklerinde kaybolmuş bir efsane olun.
+
+## Açıklama
+
+Dungeon Run, tek oyunculu bir endless runner oyunudur. Karanlık ve tehlikelerle dolu zindanlarda geçen bu macerada, oyuncular karakterlerini yönlendirerek engellerden kaçmalı ve mümkün olduğunca ileri gitmelidir. Yol boyunca toplanan elmaslarla yeni karakterler açılabilir. Dungeon Run, mobil platformlar için özel olarak tasarlanmış ve her yaştan arcade oyun severlere hitap eden heyecan verici bir deneyim sunar.       
 
 ## Oyun Özellikleri
+
 - 3D
 - Mobil
 - Endless runner
 - Tek oyunculu
 - Arcade
 - Casual
-  
+
+## Oyun Detayları:
+
+- Level Üretim Mantığı: Dungeon Run, procedural generation kullanarak her oynayışta benzersiz bir zindan yaratır. Karakter ilerledikçe yeni yollar üretilir ve geride kalan yollar otomatik olarak silinir. Bu sayede oyun, sonsuz bir şekilde ilerler.
+
+- Karakter Kontrolü: Oyuncular, karakterlerini sağa, sola, yukarı ve aşağı kaydırma hareketleriyle kontrol eder. Engellerden kaçınmak ve elmas toplamak için hızlı refleksler gereklidir.
+
+- Engeller ve Tuzaklar: Zindanın içinde oyuncuları bekleyen pek çok engel ve tuzak bulunur. Dikenli tuzaklar, sallanan baltalar ve açılıp kapanan kapaklar, oyuncuların dikkatli olmasını gerektirir. Engellere çarpmak, oyunun sona ermesine neden olur.
+
+- Karakter Seçenekleri: Oyun boyunca toplanan elmaslarla yeni karakterler açılabilir.
+
 ## Hedef Kitle
+
 - +7
 - Mobil oyun sevenler
 - Arcade oyun sevenler
