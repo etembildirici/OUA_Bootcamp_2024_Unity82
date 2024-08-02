@@ -1,5 +1,7 @@
 # Oyun ve Uygulama Akademisi Bootcamp 2024
 
+![game1](sprint3/game.PNG)
+
 ## Takım İsmi
 
 Unity 82
@@ -156,9 +158,17 @@ Trello'da kırmızı etiketli kartlar user story'leri, yeşil etiketli kartlar d
 
 - **Sprint board update:** Sprint board screenshotları:
 
-- **Sprint board update:** Sprint board screenshotları:
+![trello1](sprint3/trello1.jfif)
+
+![trello2](sprint3/trello2.jfif)
+
+![trello2](sprint3/trello3.jfif)
 
 - **Ürün durumu:** Ekran Görüntüleri:
+
+![game1](sprint3/game1.PNG)
+
+![game2](sprint3/game2.PNG)
 
 **Sprint review:**
 
