@@ -48,8 +48,9 @@ Dungeon Run, tek oyunculu bir endless runner oyunudur. Karanlık ve tehlikelerle
 - Mobil oyun sevenler
 - Arcade oyun sevenler
 
-- **Oyun APK linki:**
-- **Kullanılan assetler:**
+## Oyun APK linki
+
+## Kullanılan assetler
    
 ## Product Backlog URL
 
